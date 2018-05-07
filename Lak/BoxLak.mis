@@ -1,0 +1,829 @@
+// DisplayName = Box Lak
+// MissionTypes = LakRabbit
+
+//--- MISSION QUOTE BEGIN ---
+//A box without hinges, key, or lid,
+//yet golden treasure inside is hid.
+//  -- J. R. R. Tolkien
+//--- MISSION QUOTE END ---
+
+//--- MISSION STRING BEGIN ---
+//[LakRabbit LakZM]Kill the rabbit!
+//[TeamLak]Kill the other team!
+//--- MISSION STRING END ---
+
+//--- OBJECT WRITE BEGIN ---
+new SimGroup(MissionGroup) {
+
+	powerCount = "0";
+	CTF_scoreLimit = "100";
+	musicTrack = "badlands";
+	cdTrack = "6";
+
+	new MissionArea(MissionArea) {
+		area = "16 -136 240 240";
+		flightCeiling = "2000";
+		flightCeilingRange = "50";
+
+		locked = "false";
+	};
+	new Sun() {
+		position = "-1024 -1024 1";
+		rotation = "1 0 0 0";
+		scale = "3 3 3";
+		direction = "0.57735 0.57735 -0.57735";
+		color = "0.900000 0.900000 0.900000 1.000000";
+		ambient = "0.800000 0.800000 0.800000 1.000000";
+		texture[0] = "special/sunFlare";
+		texture[1] = "special/sunFlare02";
+		texture[2] = "special/LensFlare/flare01";
+		texture[3] = "special/LensFlare/flare02";
+		texture[4] = "special/LensFlare/flare03";
+		lensFlareScale = "0.7";
+		lensFlareIntensity = "1";
+		frontFlareSize = "300";
+		backFlareSize = "450";
+		flareColor = "1.000000 1.000000 1.000000 1.000000";
+
+		locked = "false";
+	};
+	new TerrainBlock(Terrain) {
+		rotation = "1 0 0 0";
+		scale = "1 1 1";
+		detailTexture = "details/desertdet2";
+		terrainFile = "BeggarsRun.ter";
+		squareSize = "8";
+
+		position = "-1024 -1024 0";
+	};
+	new NavigationGraph(NavGraph) {
+		conjoinAngleDev = "45";
+		cullDensity = "0.3";
+		customArea = "0 0 0 0";
+
+		position = "0 0 0 1";
+		YDimOverSize = "0";
+		conjoinBowlDev = "20";
+		rotation = "0 0 0 0";
+		GraphFile = "BeggarsRun.nav";
+		XDimOverSize = "0";
+		scale = "1 1 1";
+		coverage = "0";
+	};
+	new Sky(Sky) {
+		position = "0 0 0";
+		rotation = "1 0 0 0";
+		scale = "1 1 1";
+		cloudHeightPer[0] = "0.349971";
+		cloudHeightPer[1] = "0.25";
+		cloudHeightPer[2] = "0.199973";
+		cloudSpeed1 = "0.0001";
+		cloudSpeed2 = "0.0002";
+		cloudSpeed3 = "0.0003";
+		visibleDistance = "1000";
+		useSkyTextures = "1";
+		renderBottomTexture = "0";
+		SkySolidColor = "0.365000 0.390000 0.420000 0.000000";
+		fogDistance = "800";
+		fogColor = "0.550000 0.450000 0.380000 1.000000";
+		fogVolume1 = "0 0 0";
+		fogVolume2 = "0 0 0";
+		fogVolume3 = "0 0 0";
+		materialList = "sky_desert_blue.dml";
+		windVelocity = "1 0 0";
+		windEffectPrecipitation = "0";
+		fogVolumeColor1 = "128.000000 128.000000 128.000000 0.000000";
+		fogVolumeColor2 = "128.000000 128.000000 128.000000 0.000000";
+		fogVolumeColor3 = "128.000000 128.000000 128.000000 0.000000";
+		high_visibleDistance = "-1";
+		high_fogDistance = "-1";
+		high_fogVolume1 = "-1 9.44157e-35 4.48416e-44";
+		high_fogVolume2 = "-1 9.45563e-35 9.45395e-35";
+		high_fogVolume3 = "-1 0 9.45563e-35";
+
+		cloudSpeed0 = "0.000503 0.000020";
+		locked = "true";
+	};
+	new SimGroup(Teams) {
+
+		powerCount = "0";
+
+		new SimGroup(Team1) {
+
+			powerCount = "0";
+
+			new SimGroup(Base1) {
+
+				powerCount = "0";
+
+				new Item(-1) {
+					position = "137.533 -17.0372 145.484";
+					rotation = "1 0 0 0";
+					scale = "1 1 1";
+					dataBlock = "flag";
+					lockCount = "0";
+					homingCount = "0";
+					collideable = "0";
+					static = "1";
+					rotate = "1";
+
+					isHome = "1";
+					team = "1";
+					Trigger = "8059";
+					originalPosition = "138.047 -11.3751 166.084 1 0 0 0";
+					Target = "33";
+					className = "FlagObj";
+				};
+				new SimGroup() {
+
+					powerCount = "0";
+				};
+				new SimGroup() {
+
+					powerCount = "0";
+				};
+			};
+			new SimGroup() {
+
+				powerCount = "0";
+			};
+			new SimGroup(AIObjectives) {
+
+				powerCount = "0";
+
+				new AIObjective(AIOTouchObject) {
+					position = "-12.2639 -17.5462 303.629";
+					rotation = "1 0 0 0";
+					scale = "1 1 1";
+					dataBlock = "AIObjectiveMarker";
+					lockCount = "0";
+					homingCount = "0";
+					description = "Grab the enemy flag";
+					mode = "FlagGrab";
+					targetObject = "Team2flag1";
+					targetClientId = "-1";
+					targetObjectId = "12457";
+					location = "-12.2639 -17.5462 303.629";
+					weightLevel1 = "5000";
+					weightLevel2 = "4000";
+					weightLevel3 = "0";
+					weightLevel4 = "0";
+					offense = "1";
+					defense = "0";
+					issuedByHuman = "0";
+					issuedByClientId = "-1";
+					forceClientId = "-1";
+					locked = "0";
+
+					team = "1";
+					gameType = "all";
+					isInvalid = "0";
+				};
+				new AIObjective(AIOTouchObject) {
+					position = "146.924 -17.5791 303.358";
+					rotation = "1 0 0 0";
+					scale = "1 1 1";
+					dataBlock = "AIObjectiveMarker";
+					lockCount = "0";
+					homingCount = "0";
+					description = "Return our flag";
+					mode = "FlagDropped";
+					targetObject = "Team1flag1";
+					targetClientId = "-1";
+					targetObjectId = "12366";
+					location = "146.924 -17.5791 303.358";
+					weightLevel1 = "5500";
+					weightLevel2 = "4100";
+					weightLevel3 = "0";
+					weightLevel4 = "0";
+					offense = "1";
+					defense = "1";
+					issuedByHuman = "0";
+					issuedByClientId = "-1";
+					forceClientId = "-1";
+					locked = "0";
+
+					team = "1";
+					gameType = "all";
+					isInvalid = "0";
+				};
+				new AIObjective(AIOTouchObject) {
+					position = "-12.2639 -17.5462 303.629";
+					rotation = "1 0 0 0";
+					scale = "1 1 1";
+					dataBlock = "AIObjectiveMarker";
+					lockCount = "0";
+					homingCount = "0";
+					description = "Capture the flag!";
+					mode = "FlagCapture";
+					targetObject = "Team2flag1";
+					targetClientId = "-1";
+					targetObjectId = "12457";
+					location = "-12.2639 -17.5462 303.629";
+					weightLevel1 = "5000";
+					weightLevel2 = "0";
+					weightLevel3 = "0";
+					weightLevel4 = "0";
+					offense = "1";
+					defense = "1";
+					issuedByHuman = "0";
+					issuedByClientId = "-1";
+					forceClientId = "-1";
+					locked = "0";
+
+					team = "1";
+					gameType = "all";
+					isInvalid = "0";
+				};
+				new AIObjective(AIOTouchObject) {
+					position = "-12.2639 -17.5462 303.629";
+					rotation = "1 0 0 0";
+					scale = "1 1 1";
+					dataBlock = "AIObjectiveMarker";
+					lockCount = "0";
+					homingCount = "0";
+					description = "Grab the dropped enemy flag";
+					mode = "FlagDropped";
+					targetObject = "Team2flag1";
+					targetClientId = "-1";
+					targetObjectId = "12457";
+					location = "-12.2639 -17.5462 303.629";
+					weightLevel1 = "5001";
+					weightLevel2 = "4100";
+					weightLevel3 = "0";
+					weightLevel4 = "0";
+					offense = "1";
+					defense = "1";
+					issuedByHuman = "0";
+					issuedByClientId = "-1";
+					forceClientId = "-1";
+					locked = "0";
+
+					team = "1";
+					gameType = "all";
+					isInvalid = "0";
+				};
+				new AIObjective(AIODefendLocation) {
+					position = "146.924 -17.5791 303.358";
+					rotation = "1 0 0 0";
+					scale = "1 1 1";
+					dataBlock = "AIObjectiveMarker";
+					lockCount = "0";
+					homingCount = "0";
+					description = "Defend our flag";
+					targetObject = "Team1flag1";
+					targetClientId = "-1";
+					targetObjectId = "12366";
+					location = "146.924 -17.5791 303.358";
+					weightLevel1 = "4500";
+					weightLevel2 = "2900";
+					weightLevel3 = "0";
+					weightLevel4 = "0";
+					offense = "0";
+					defense = "1";
+					chat = "ChatYouRock DefendBase";
+					issuedByHuman = "0";
+					issuedByClientId = "-1";
+					forceClientId = "-1";
+					locked = "0";
+
+					team = "1";
+					gameType = "all";
+					isInvalid = "0";
+				};
+				new AIObjective(AIOAttackPlayer) {
+					position = "146.924 -17.5791 303.358";
+					rotation = "1 0 0 0";
+					scale = "1 1 1";
+					dataBlock = "AIObjectiveMarker";
+					lockCount = "0";
+					homingCount = "0";
+					description = "Kill the enemy flag carrier";
+					mode = "FlagCarrier";
+					targetObject = "Team1flag1";
+					targetClientId = "-1";
+					targetObjectId = "12366";
+					location = "146.924 -17.5791 303.358";
+					weightLevel1 = "5000";
+					weightLevel2 = "4900";
+					weightLevel3 = "0";
+					weightLevel4 = "0";
+					offense = "1";
+					defense = "0";
+					issuedByHuman = "0";
+					issuedByClientId = "-1";
+					forceClientId = "-1";
+					locked = "0";
+
+					team = "1";
+					gameType = "all";
+					isInvalid = "0";
+				};
+				new SimGroup(FUCKKKKKKK) {
+
+					powerCount = "0";
+				};
+			};
+		};
+		new SimGroup(Team2) {
+
+			powerCount = "0";
+
+			new SimGroup(AIObjectives) {
+
+				powerCount = "0";
+
+				new AIObjective(AIODefendLocation) {
+					position = "-12.2639 -17.5462 303.629";
+					rotation = "1 0 0 0";
+					scale = "1 1 1";
+					dataBlock = "AIObjectiveMarker";
+					lockCount = "0";
+					homingCount = "0";
+					description = "Defend our flag";
+					targetObject = "Team2flag1";
+					targetClientId = "-1";
+					targetObjectId = "12457";
+					location = "-12.2639 -17.5462 303.629";
+					weightLevel1 = "4900";
+					weightLevel2 = "2500";
+					weightLevel3 = "0";
+					weightLevel4 = "0";
+					offense = "0";
+					defense = "1";
+					chat = "ChatYouRock DefendBase";
+					issuedByHuman = "0";
+					issuedByClientId = "-1";
+					forceClientId = "-1";
+					locked = "0";
+
+					team = "2";
+					gameType = "all";
+					isInvalid = "0";
+				};
+				new AIObjective(AIOTouchObject) {
+					position = "-12.2639 -17.5462 303.629";
+					rotation = "1 0 0 0";
+					scale = "1 1 1";
+					dataBlock = "AIObjectiveMarker";
+					lockCount = "0";
+					homingCount = "0";
+					description = "Return our flag";
+					mode = "FlagDropped";
+					targetObject = "Team2flag1";
+					targetClientId = "-1";
+					targetObjectId = "12457";
+					location = "-12.2639 -17.5462 303.629";
+					weightLevel1 = "5001";
+					weightLevel2 = "4100";
+					weightLevel3 = "0";
+					weightLevel4 = "0";
+					offense = "1";
+					defense = "1";
+					issuedByHuman = "0";
+					issuedByClientId = "-1";
+					forceClientId = "-1";
+					locked = "0";
+
+					team = "2";
+					gameType = "all";
+					isInvalid = "0";
+				};
+				new AIObjective(AIOAttackPlayer) {
+					position = "-12.2639 -17.5462 303.629";
+					rotation = "1 0 0 0";
+					scale = "1 1 1";
+					dataBlock = "AIObjectiveMarker";
+					lockCount = "0";
+					homingCount = "0";
+					description = "Kill the enemy flag carrier";
+					mode = "FlagCarrier";
+					targetObject = "Team2flag1";
+					targetClientId = "-1";
+					targetObjectId = "12457";
+					location = "-12.2639 -17.5462 303.629";
+					weightLevel1 = "4800";
+					weightLevel2 = "3500";
+					weightLevel3 = "2500";
+					weightLevel4 = "0";
+					offense = "1";
+					defense = "1";
+					issuedByHuman = "0";
+					issuedByClientId = "-1";
+					forceClientId = "-1";
+					locked = "0";
+
+					team = "2";
+					gameType = "all";
+					isInvalid = "0";
+				};
+				new AIObjective(AIOTouchObject) {
+					position = "146.924 -17.5791 303.358";
+					rotation = "1 0 0 0";
+					scale = "1 1 1";
+					dataBlock = "AIObjectiveMarker";
+					lockCount = "0";
+					homingCount = "0";
+					description = "Grab the enemy flag";
+					mode = "FlagGrab";
+					targetObject = "Team1flag1";
+					targetClientId = "-1";
+					targetObjectId = "12366";
+					location = "146.924 -17.5791 303.358";
+					weightLevel1 = "4950";
+					weightLevel2 = "3000";
+					weightLevel3 = "2000";
+					weightLevel4 = "0";
+					offense = "1";
+					defense = "0";
+					issuedByHuman = "0";
+					issuedByClientId = "-1";
+					forceClientId = "-1";
+					locked = "0";
+
+					team = "2";
+					gameType = "all";
+					isInvalid = "0";
+				};
+				new AIObjective(AIOTouchObject) {
+					position = "146.924 -17.5791 303.358";
+					rotation = "1 0 0 0";
+					scale = "1 1 1";
+					dataBlock = "AIObjectiveMarker";
+					lockCount = "0";
+					homingCount = "0";
+					description = "Capture the flag!";
+					mode = "FlagCapture";
+					targetObject = "Team1flag1";
+					targetClientId = "-1";
+					targetObjectId = "12366";
+					location = "146.924 -17.5791 303.358";
+					weightLevel1 = "5001";
+					weightLevel2 = "4000";
+					weightLevel3 = "3000";
+					weightLevel4 = "0";
+					offense = "1";
+					defense = "0";
+					issuedByHuman = "0";
+					issuedByClientId = "-1";
+					forceClientId = "-1";
+					locked = "0";
+
+					team = "2";
+					gameType = "all";
+					isInvalid = "0";
+				};
+				new AIObjective(AIOTouchObject) {
+					position = "146.924 -17.5791 303.358";
+					rotation = "1 0 0 0";
+					scale = "1 1 1";
+					dataBlock = "AIObjectiveMarker";
+					lockCount = "0";
+					homingCount = "0";
+					description = "Grab the dropped enemy flag";
+					mode = "FlagDropped";
+					targetObject = "Team1flag1";
+					targetClientId = "-1";
+					targetObjectId = "12366";
+					location = "146.924 -17.5791 303.358";
+					weightLevel1 = "5001";
+					weightLevel2 = "4100";
+					weightLevel3 = "1000";
+					weightLevel4 = "0";
+					offense = "1";
+					defense = "1";
+					issuedByHuman = "0";
+					issuedByClientId = "-1";
+					forceClientId = "-1";
+					locked = "0";
+
+					team = "2";
+					gameType = "all";
+					isInvalid = "0";
+				};
+				new AIObjective(AIOTouchObject) {
+					position = "-12.1478 -17.4974 304.513";
+					rotation = "1 0 0 0";
+					scale = "1 1 1";
+					dataBlock = "AIObjectiveMarker";
+					lockCount = "0";
+					homingCount = "0";
+					description = "Capture the flag!";
+					mode = "FlagCapture";
+					targetObject = "Team2flag1";
+					targetClientId = "-1";
+					targetObjectId = "12457";
+					location = "-12.1478 -17.4974 304.513";
+					weightLevel1 = "5000";
+					weightLevel2 = "0";
+					weightLevel3 = "0";
+					weightLevel4 = "0";
+					offense = "1";
+					defense = "0";
+					issuedByHuman = "0";
+					issuedByClientId = "-1";
+					forceClientId = "-1";
+					locked = "0";
+
+					team = "2";
+					gameType = "all";
+					isInvalid = "0";
+				};
+			};
+			new SimGroup(spawnspheres) {
+
+				powerCount = "0";
+				team = "1";
+
+				new SpawnSphere() {
+					position = "-11.7677 -15.9608 184.389";
+					rotation = "1 0 0 0";
+					scale = "1 1 1";
+					dataBlock = "SpawnSphereMarker";
+					lockCount = "0";
+					homingCount = "0";
+					radius = "40";
+					sphereWeight = "100";
+					indoorWeight = "100";
+					outdoorWeight = "0";
+				};
+				new SpawnSphere() {
+					position = "120.124 83.426 190.823";
+					rotation = "1 0 0 0";
+					scale = "1 1 1";
+					dataBlock = "SpawnSphereMarker";
+					lockCount = "0";
+					homingCount = "0";
+					radius = "40";
+					sphereWeight = "100";
+					indoorWeight = "100";
+					outdoorWeight = "0";
+				};
+				new SpawnSphere() {
+					position = "56.1955 -114.434 185.645";
+					rotation = "1 0 0 0";
+					scale = "1 1 1";
+					dataBlock = "SpawnSphereMarker";
+					lockCount = "0";
+					homingCount = "0";
+					radius = "40";
+					sphereWeight = "100";
+					indoorWeight = "100";
+					outdoorWeight = "0";
+				};
+				new SpawnSphere() {
+					position = "56.1955 -25.634 178.245";
+					rotation = "1 0 0 0";
+					scale = "1 1 1";
+					dataBlock = "SpawnSphereMarker";
+					lockCount = "0";
+					homingCount = "0";
+					radius = "40";
+					sphereWeight = "100";
+					indoorWeight = "100";
+					outdoorWeight = "0";
+				};
+				new SpawnSphere() {
+					position = "216.187 -28.7872 187.16";
+					rotation = "1 0 0 0";
+					scale = "1 1 1";
+					dataBlock = "SpawnSphereMarker";
+					lockCount = "0";
+					homingCount = "0";
+					radius = "40";
+					sphereWeight = "100";
+					indoorWeight = "100";
+					outdoorWeight = "0";
+				};
+			};
+			new SimGroup(FUCKKKKKKK) {
+
+				powerCount = "0";
+			};
+			new SimGroup(Base2) {
+
+				powerCount = "0";
+
+				new SimGroup() {
+
+					powerCount = "0";
+				};
+				new SimGroup() {
+
+					powerCount = "0";
+				};
+				new SimGroup() {
+
+					powerCount = "0";
+				};
+			};
+			new SimGroup() {
+
+				powerCount = "0";
+			};
+		};
+		new SimGroup(Team0) {
+
+			powerCount = "0";
+
+			new InteriorInstance(InteriorInstance) {
+				position = "253.954 -75.2003 508.991";
+				rotation = "1 0 0 0";
+				scale = "1 15 23";
+				interiorFile = "pwall1.dif";
+				showTerrainInside = "0";
+
+				team = "0";
+			};
+			new SimGroup(ARENA) {
+
+				powerCount = "0";
+
+				new SimGroup() {
+
+					powerCount = "0";
+				};
+				new InteriorInstance(InteriorInstance) {
+					position = "135.454 -16.1194 144.692";
+					rotation = "1 1.30523e-10 -1.79345e-13 180.091";
+					scale = "1.2 2.7 2.1";
+					interiorFile = "nef_ramp1.dif";
+					showTerrainInside = "0";
+
+					team = "0";
+				};
+			};
+			new InteriorInstance(InteriorInstance) {
+				position = "196.422 -138.804 509.191";
+				rotation = "0 0 -1 89.9544";
+				scale = "1 15.25 23";
+				interiorFile = "pwall1.dif";
+				showTerrainInside = "0";
+
+				team = "0";
+			};
+			new InteriorInstance(InteriorInstance) {
+				position = "74.8554 105.552 508.991";
+				rotation = "0 0 1 89.9544";
+				scale = "1 15.25 23";
+				interiorFile = "pwall1.dif";
+				showTerrainInside = "0";
+
+				team = "0";
+			};
+			new InteriorInstance(InteriorInstance) {
+				position = "13.2801 -75.7894 508.991";
+				rotation = "1 0 0 0";
+				scale = "1 15 23";
+				interiorFile = "pwall1.dif";
+				showTerrainInside = "0";
+
+				team = "0";
+			};
+		};
+	};
+	new SimGroup(ObserverDropPoints) {
+
+		powerCount = "0";
+
+		new Camera() {
+			position = "246.884 33.3912 334.293";
+			rotation = "-0.278246 -0.417345 0.865103 239.95";
+			scale = "1 1 1";
+			dataBlock = "Observer";
+			lockCount = "0";
+			homingCount = "0";
+
+			team = "0";
+		};
+		new Camera() {
+			position = "242.96 -79.2802 332.988";
+			rotation = "0.591144 0.342922 -0.730036 76.9426";
+			scale = "1 1 1";
+			dataBlock = "Observer";
+			lockCount = "0";
+			homingCount = "0";
+
+			team = "1";
+		};
+		new Camera() {
+			position = "55.0636 -10.1356 317.165";
+			rotation = "0.458663 -0.449223 0.766699 103.892";
+			scale = "1 1 1";
+			dataBlock = "Observer";
+			lockCount = "0";
+			homingCount = "0";
+
+			team = "2";
+		};
+	};
+	new SimGroup(Sounds) {
+
+		powerCount = "0";
+	};
+	new SimGroup() {
+
+		powerCount = "0";
+	};
+	new InteriorInstance() {
+		position = "139.987 -17.0259 124.004";
+		rotation = "1 0 0 0";
+		scale = "1 1 1";
+		interiorFile = "ptowr7.dif";
+		showTerrainInside = "0";
+	};
+	new InteriorInstance(InteriorInstance) {
+		position = "135.418 -18.7962 145.375";
+		rotation = "0.57735 0.57735 0.57735 1.7323";
+		scale = "1 0.5 0.01";
+		interiorFile = "pwall1.dif";
+		showTerrainInside = "0";
+	};
+	new FileObject() {
+	};
+	new FileObject() {
+	};
+	new InteriorInstance() {
+		position = "61.0249 -122.32 192.808";
+		rotation = "1 0 0 0";
+		scale = "1 1 1";
+		interiorFile = "pplat1.dif";
+		showTerrainInside = "0";
+	};
+	new InteriorInstance() {
+		position = "26.5723 23.5688 152.898";
+		rotation = "1 0 0 0";
+		scale = "1 1 1";
+		interiorFile = "prockc.dif";
+		showTerrainInside = "0";
+	};
+	new InteriorInstance() {
+		position = "252.471 86.8547 141.456";
+		rotation = "1 0 0 0";
+		scale = "1 1 1";
+		interiorFile = "procka.dif";
+		showTerrainInside = "0";
+	};
+	new InteriorInstance() {
+		position = "219.214 -62.3654 144.052";
+		rotation = "1 0 0 0";
+		scale = "1 1 1";
+		interiorFile = "prock7.dif";
+		showTerrainInside = "0";
+	};
+	new InteriorInstance() {
+		position = "244.541 -64.6781 156.035";
+		rotation = "-9.03566e-10 1.20779e-08 1 180.091";
+		scale = "1 1 1";
+		interiorFile = "prockc.dif";
+		showTerrainInside = "0";
+	};
+	new InteriorInstance() {
+		position = "34.6884 56.9934 144.356";
+		rotation = "0 -1 0 52.7121";
+		scale = "1 1 1";
+		interiorFile = "prock6.dif";
+		showTerrainInside = "0";
+	};
+	new InteriorInstance() {
+		position = "238.424 -102.526 144.524";
+		rotation = "0 0 -1 63.5983";
+		scale = "1 1 1";
+		interiorFile = "prock7.dif";
+		showTerrainInside = "0";
+	};
+	new InteriorInstance() {
+		position = "30.5545 60.0989 144.418";
+		rotation = "1 0 0 0";
+		scale = "1 1 1";
+		interiorFile = "prock6.dif";
+		showTerrainInside = "0";
+	};
+	new Item() {
+		position = "61.2335 -122.405 195.509";
+		rotation = "1 0 0 0";
+		scale = "1 1 1";
+		dataBlock = "RepairKit";
+		lockCount = "0";
+		homingCount = "0";
+		collideable = "0";
+		static = "1";
+		rotate = "0";
+
+		Target = "-1";
+	};
+	new Item() {
+		position = "246.315 93.164 157.445";
+		rotation = "1 0 0 0";
+		scale = "1 1 1";
+		dataBlock = "RepairKit";
+		lockCount = "0";
+		homingCount = "0";
+		collideable = "0";
+		static = "1";
+		rotate = "0";
+
+		Target = "-1";
+	};
+};
+//--- OBJECT WRITE END ---
