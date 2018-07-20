@@ -11,17 +11,17 @@
 
 //--- MISSION STRING BEGIN ---
 //[LakRabbit LakZM]Kill the rabbit!
-//May by Fling :D !!!
+//Map by Fling :D !!!
 //--- MISSION STRING END ---
 
 //--- OBJECT WRITE BEGIN ---
 new SimGroup(MissionGroup) {
 
+	powerCount = "0";
 	musicTrack = "lush";
 	CTF_timeLimit = "25";
 	CTF_scoreLimit = "8";
 	cdTrack = "2";
-	powerCount = "0";
 
 	new MissionArea(MissionArea) {
 		area = "-800 -992 1616 1424";
@@ -68,15 +68,15 @@ new SimGroup(MissionGroup) {
 		cullDensity = "0.3";
 		customArea = "0 0 0 0";
 
-		rotation = "0 0 0 0";
+		YDimOverSize = "0";
 		XDimOverSize = "0";
-		scale = "1 1 1";
-		conjoinBowlDev = "20";
 		locked = "true";
 		GraphFile = "MissionBlank.nav";
-		coverage = "0";
 		position = "0 0 0 1";
-		YDimOverSize = "0";
+		conjoinBowlDev = "20";
+		rotation = "0 0 0 0";
+		coverage = "0";
+		scale = "1 1 1";
 	};
 	new WaterBlock() {
 		position = "-112 16 66.342";
@@ -269,25 +269,6 @@ new SimGroup(MissionGroup) {
 
 					team = "1";
 				};
-				new Item(-1) {
-					position = "-6.80004 -42.8 104.203";
-					rotation = "1 0 0 0";
-					scale = "1 1 1";
-					dataBlock = "flag";
-					lockCount = "0";
-					homingCount = "0";
-					collideable = "0";
-					static = "1";
-					rotate = "1";
-
-					originalPosition = "-6.80004 -42.8 104.203 1 0 0 0";
-					isHome = "1";
-					className = "FlagObj";
-					team = "1";
-					WayPoint = "4840";
-					Trigger = "4763";
-					Target = "33";
-				};
 				new InteriorInstance(InteriorInstance) {
 					position = "-320 -163.5 151";
 					rotation = "1 0 0 0";
@@ -469,6 +450,28 @@ new SimGroup(MissionGroup) {
 				showTerrainInside = "0";
 
 				team = "0";
+			};
+			new Item(Team0Flag1) {
+				position = "-6.80083 -42.7686 104.198";
+				rotation = "1 0 0 0";
+				scale = "1 1 1";
+				dataBlock = "flag";
+				lockCount = "0";
+				homingCount = "0";
+				collideable = "0";
+				static = "0";
+				rotate = "1";
+
+				isHome = "1";
+				className = "FlagObj";
+				searchSchedule = "4726";
+				returnThread = "2094";
+				bounced = "0";
+				team = "0";
+				WayPoint = "4840";
+				Trigger = "7681";
+				Target = "34";
+				originalPosition = "-179.297 76.7287 104.955 1 0 0 0";
 			};
 		};
 	};

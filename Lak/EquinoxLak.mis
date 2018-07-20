@@ -18,11 +18,11 @@
 //--- OBJECT WRITE BEGIN ---
 new SimGroup(MissionGroup) {
 
-	DM_timeLimit = "25";
-	cdTrack = "2";
-	CnH_timeLimit = "25";
-	musicTrack = "lush";
 	powerCount = "0";
+	DM_timeLimit = "25";
+	musicTrack = "lush";
+	CnH_timeLimit = "25";
+	cdTrack = "2";
 	DM_scoreLimit = "16";
 
 	new MissionArea(MissionArea) {
@@ -49,7 +49,6 @@ new SimGroup(MissionGroup) {
 		frontFlareSize = "300";
 		backFlareSize = "450";
 		flareColor = "1.000000 1.000000 1.000000 1.000000";
-
 	};
 	new TerrainBlock(Terrain) {
 		rotation = "1 0 0 0";
@@ -58,25 +57,25 @@ new SimGroup(MissionGroup) {
 		terrainFile = "Equinox.ter";
 		squareSize = "8";
 
-		visibleDistance = "1200";
-		hazeDistance = "250";
-		locked = "true";
 		position = "-1024 -1024 0";
+		hazeDistance = "250";
+		visibleDistance = "1200";
+		locked = "true";
 	};
 	new NavigationGraph(NavGraph) {
 		conjoinAngleDev = "45";
 		cullDensity = "0.3";
 		customArea = "0 0 0 0";
 
+		XDimOverSize = "0";
+		position = "0 0 0 1";
+		GraphFile = "Equinox.nav";
+		conjoinBowlDev = "20";
+		rotation = "0 0 0 0";
 		scale = "1 1 1";
 		coverage = "0";
 		YDimOverSize = "0";
 		locked = "true";
-		position = "0 0 0 1";
-		XDimOverSize = "0";
-		rotation = "0 0 0 0";
-		conjoinBowlDev = "20";
-		GraphFile = "Equinox.nav";
 	};
 	new Sky(Sky) {
 		position = "-832 -1272 0";
@@ -122,7 +121,6 @@ new SimGroup(MissionGroup) {
 			dataBlock = "Observer";
 			lockCount = "0";
 			homingCount = "0";
-
 		};
 		new Camera() {
 			position = "-223.241 470.553 92.0225";
@@ -139,7 +137,6 @@ new SimGroup(MissionGroup) {
 			dataBlock = "Observer";
 			lockCount = "0";
 			homingCount = "0";
-
 		};
 		new Camera() {
 			position = "237.03 -225.793 108.077";
@@ -172,8 +169,8 @@ new SimGroup(MissionGroup) {
 
 				new SimGroup(Tower1) {
 
-					providesPower = "1";
 					powerCount = "1";
+					providesPower = "1";
 
 					new InteriorInstance() {
 						position = "-202.351 433.802 74.8672";
@@ -184,53 +181,53 @@ new SimGroup(MissionGroup) {
 						AudioProfile = "Universal_Base_2";
 						AudioEnvironment = "SmallRoom";
 
-						locked = "true";
 						team = "0";
+						locked = "true";
 					};
 					new StaticShape(Team0flipflop1) {
 						position = "-202.397 426.928 88.8532";
 						rotation = "1 0 0 0";
 						scale = "1 1 1";
-						nameTag = "\x01818";
+						nameTag = "\x01844";
 						dataBlock = "FlipFlop";
 						lockCount = "0";
 						homingCount = "0";
 
+						missionTypesList = "CnH";
+						team = "0";
+						Projector = "11922";
+						number = "0";
 						locked = "true";
 						name = "NW Stronghold";
-						number = "0";
-						Target = "33";
-						team = "0";
-						missionTypesList = "CnH";
-						Projector = "8261";
+						Target = "34";
 					};
 					new StaticShape(Team0StationInventory1) {
 						position = "-198.372 436.956 80.365";
 						rotation = "0 0 1 89.9544";
 						scale = "1 1 1";
-						nameTag = "\x01818";
+						nameTag = "\x01844";
 						dataBlock = "StationInventory";
 						lockCount = "0";
 						homingCount = "0";
 
-						locked = "false";
-						Target = "34";
 						team = "0";
-						Trigger = "8258";
+						Trigger = "11919";
+						locked = "false";
+						Target = "35";
 					};
 					new StaticShape(Team0StationInventory2) {
 						position = "-206.68 436.629 80.365";
 						rotation = "0 0 -1 89.9544";
 						scale = "1 1 1";
-						nameTag = "\x01818";
+						nameTag = "\x01844";
 						dataBlock = "StationInventory";
 						lockCount = "0";
 						homingCount = "0";
 
-						locked = "true";
-						Target = "35";
 						team = "0";
-						Trigger = "8260";
+						Trigger = "11921";
+						locked = "true";
+						Target = "36";
 					};
 					new StaticShape() {
 						position = "-202.399 435.794 97.3382";
@@ -240,17 +237,17 @@ new SimGroup(MissionGroup) {
 						lockCount = "0";
 						homingCount = "0";
 
+						missionTypesList = "CnH";
+						team = "0";
 						holo = "0";
 						locked = "true";
 						Target = "-1";
-						team = "0";
-						missionTypesList = "CnH";
 					};
 				};
 				new SimGroup(Tower2) {
 
-					providesPower = "1";
 					powerCount = "1";
+					providesPower = "1";
 
 					new InteriorInstance() {
 						position = "398.856 364.063 44.7872";
@@ -261,8 +258,8 @@ new SimGroup(MissionGroup) {
 						AudioProfile = "Universal_Base_2";
 						AudioEnvironment = "SmallRoom";
 
-						locked = "true";
 						team = "0";
+						locked = "true";
 					};
 					new StaticShape(Team0flipflop2) {
 						position = "406.409 361.085 75.5221";
@@ -272,42 +269,42 @@ new SimGroup(MissionGroup) {
 						lockCount = "0";
 						homingCount = "0";
 
+						missionTypesList = "CnH";
+						missionListTypes = "CnH";
+						team = "0";
+						Projector = "11930";
+						number = "1";
 						locked = "true";
 						name = "NE Stronghold";
-						missionListTypes = "CnH";
-						number = "1";
-						Target = "36";
-						team = "0";
-						missionTypesList = "CnH";
-						Projector = "8271";
+						Target = "37";
 					};
 					new StaticShape(Team0StationInventory3) {
 						position = "395.167 369.591 63.55";
 						rotation = "0 0 1 127.197";
 						scale = "1 1 1";
-						nameTag = "\x01819";
+						nameTag = "\x01845";
 						dataBlock = "StationInventory";
 						lockCount = "0";
 						homingCount = "0";
 
-						locked = "true";
-						Target = "37";
 						team = "0";
-						Trigger = "8267";
+						Trigger = "11927";
+						locked = "true";
+						Target = "38";
 					};
 					new StaticShape(Team0StationInventory4) {
 						position = "402.316 359.441 57.62";
 						rotation = "0 0 1 217.724";
 						scale = "1 1 1";
-						nameTag = "\x01819";
+						nameTag = "\x01845";
 						dataBlock = "StationInventory";
 						lockCount = "0";
 						homingCount = "0";
 
-						locked = "true";
-						Target = "38";
 						team = "0";
-						Trigger = "8269";
+						Trigger = "11929";
+						locked = "true";
+						Target = "39";
 					};
 					new StaticShape() {
 						position = "399.689 366.189 90.4933";
@@ -317,17 +314,17 @@ new SimGroup(MissionGroup) {
 						lockCount = "0";
 						homingCount = "0";
 
+						missionTypesList = "CnH";
+						team = "0";
 						holo = "0";
 						locked = "true";
 						Target = "-1";
-						team = "0";
-						missionTypesList = "CnH";
 					};
 				};
 				new SimGroup(Tower3) {
 
-					providesPower = "1";
 					powerCount = "1";
+					providesPower = "1";
 
 					new InteriorInstance() {
 						position = "330.779 -261.455 73.5873";
@@ -337,8 +334,8 @@ new SimGroup(MissionGroup) {
 						showTerrainInside = "0";
 						AudioProfile = "Universal_Base_2";
 
-						locked = "true";
 						team = "0";
+						locked = "true";
 					};
 					new StaticShape() {
 						position = "332.492 -259.527 102.414";
@@ -348,25 +345,25 @@ new SimGroup(MissionGroup) {
 						lockCount = "0";
 						homingCount = "0";
 
+						missionTypesList = "CnH";
+						team = "0";
 						holo = "0";
 						locked = "true";
 						Target = "-1";
-						team = "0";
-						missionTypesList = "CnH";
 					};
 					new StaticShape(Team0StationInventory6) {
 						position = "335.204 -262.955 71.585";
 						rotation = "0 0 1 134.072";
 						scale = "1 1 1";
-						nameTag = "\x01820";
+						nameTag = "\x01846";
 						dataBlock = "StationInventory";
 						lockCount = "0";
 						homingCount = "0";
 
-						locked = "true";
-						Target = "39";
 						team = "0";
-						Trigger = "8276";
+						Trigger = "11935";
+						locked = "true";
+						Target = "40";
 					};
 					new StaticShape(Team0flipflop3) {
 						position = "328.656 -256.267 71.5";
@@ -376,20 +373,20 @@ new SimGroup(MissionGroup) {
 						lockCount = "0";
 						homingCount = "0";
 
+						missionTypesList = "CnH";
+						missionListTypes = "CnH";
+						team = "0";
+						Projector = "11933";
+						number = "2";
 						locked = "true";
 						name = "SE Stronghold";
-						missionListTypes = "CnH";
-						number = "2";
-						Target = "40";
-						team = "0";
-						missionTypesList = "CnH";
-						Projector = "8274";
+						Target = "41";
 					};
 				};
 				new SimGroup(Tower4) {
 
-					providesPower = "1";
 					powerCount = "1";
+					providesPower = "1";
 
 					new InteriorInstance() {
 						position = "-67.1011 -328.438 67.7471";
@@ -400,8 +397,8 @@ new SimGroup(MissionGroup) {
 						AudioProfile = "Universal_Base_2";
 						AudioEnvironment = "SmallRoom";
 
-						locked = "true";
 						team = "0";
+						locked = "true";
 					};
 					new StaticShape(Team0flipflop4) {
 						position = "-63.9736 -334.333 77.7";
@@ -411,42 +408,42 @@ new SimGroup(MissionGroup) {
 						lockCount = "0";
 						homingCount = "0";
 
+						missionTypesList = "CnH";
+						missionListTypes = "CnH";
+						team = "0";
+						Projector = "11944";
+						number = "3";
 						locked = "false";
 						name = "SW Stronghold";
-						missionListTypes = "CnH";
-						number = "3";
-						Target = "41";
-						team = "0";
-						missionTypesList = "CnH";
-						Projector = "8286";
+						Target = "42";
 					};
 					new StaticShape(Team0StationInventory7) {
 						position = "-71.9901 -334.708 85.61";
 						rotation = "0 0 -1 119.175";
 						scale = "1 1 1";
-						nameTag = "\x01821";
+						nameTag = "\x01847";
 						dataBlock = "StationInventory";
 						lockCount = "0";
 						homingCount = "0";
 
-						locked = "true";
-						Target = "42";
 						team = "0";
-						Trigger = "8283";
+						Trigger = "11941";
+						locked = "true";
+						Target = "43";
 					};
 					new StaticShape(Team0StationInventory8) {
 						position = "-59.6764 -327.717 85.61";
 						rotation = "0 0 1 62.4524";
 						scale = "1 1 1";
-						nameTag = "\x01821";
+						nameTag = "\x01847";
 						dataBlock = "StationInventory";
 						lockCount = "0";
 						homingCount = "0";
 
-						locked = "true";
-						Target = "43";
 						team = "0";
-						Trigger = "8285";
+						Trigger = "11943";
+						locked = "true";
+						Target = "44";
 					};
 					new StaticShape() {
 						position = "-65.6336 -330.935 99.2";
@@ -456,11 +453,11 @@ new SimGroup(MissionGroup) {
 						lockCount = "0";
 						homingCount = "0";
 
+						missionTypesList = "CnH";
+						team = "0";
 						holo = "0";
 						locked = "true";
 						Target = "-1";
-						team = "0";
-						missionTypesList = "CnH";
 					};
 				};
 			};
@@ -468,7 +465,7 @@ new SimGroup(MissionGroup) {
 
 				powerCount = "0";
 			};
-			new Item() {
+			new Item(Team0Flag1) {
 				position = "116.806 94.6658 121.35";
 				rotation = "1 0 0 0";
 				scale = "1 1 1";
@@ -479,12 +476,12 @@ new SimGroup(MissionGroup) {
 				static = "1";
 				rotate = "1";
 
-				originalPosition = "116.806 94.6658 121.35 1 0 0 0";
-				className = "FlagObj";
-				isHome = "1";
-				Target = "44";
 				team = "0";
-				Trigger = "8378";
+				Trigger = "12035";
+				originalPosition = "116.806 94.6658 121.35 1 0 0 0";
+				isHome = "1";
+				className = "FlagObj";
+				Target = "45";
 			};
 		};
 		new SimGroup(Team1) {
@@ -540,8 +537,8 @@ new SimGroup(MissionGroup) {
 					forceClientId = "-1";
 					locked = "1";
 
-					team = "1";
 					isInvalid = "0";
+					team = "1";
 				};
 				new AIObjective(AIORepairObject) {
 					position = "-198.372 436.956 82.0292";
@@ -568,8 +565,8 @@ new SimGroup(MissionGroup) {
 					forceClientId = "-1";
 					locked = "1";
 
-					team = "1";
 					isInvalid = "0";
+					team = "1";
 				};
 				new AIObjective(AIORepairObject) {
 					position = "-206.68 436.629 82.0071";
@@ -596,8 +593,8 @@ new SimGroup(MissionGroup) {
 					forceClientId = "-1";
 					locked = "1";
 
-					team = "1";
 					isInvalid = "0";
+					team = "1";
 				};
 				new AIObjective(AIOTouchObject) {
 					position = "406.409 361.085 77.1558";
@@ -625,8 +622,8 @@ new SimGroup(MissionGroup) {
 					forceClientId = "-1";
 					locked = "1";
 
-					team = "1";
 					isInvalid = "0";
+					team = "1";
 				};
 				new AIObjective(AIORepairObject) {
 					position = "395.167 369.591 65.1158";
@@ -653,8 +650,8 @@ new SimGroup(MissionGroup) {
 					forceClientId = "-1";
 					locked = "1";
 
-					team = "1";
 					isInvalid = "0";
+					team = "1";
 				};
 				new AIObjective(AIORepairObject) {
 					position = "402.316 359.441 59.217";
@@ -681,8 +678,8 @@ new SimGroup(MissionGroup) {
 					forceClientId = "-1";
 					locked = "1";
 
-					team = "1";
 					isInvalid = "0";
+					team = "1";
 				};
 				new AIObjective(AIORepairObject) {
 					position = "-59.6764 -327.717 87.3327";
@@ -709,8 +706,8 @@ new SimGroup(MissionGroup) {
 					forceClientId = "-1";
 					locked = "1";
 
-					team = "1";
 					isInvalid = "0";
+					team = "1";
 				};
 				new AIObjective(AIORepairObject) {
 					position = "335.204 -262.955 73.268";
@@ -737,8 +734,8 @@ new SimGroup(MissionGroup) {
 					forceClientId = "-1";
 					locked = "1";
 
-					team = "1";
 					isInvalid = "0";
+					team = "1";
 				};
 				new AIObjective(AIOTouchObject) {
 					position = "328.674 -256.375 72.6995";
@@ -766,8 +763,8 @@ new SimGroup(MissionGroup) {
 					forceClientId = "-1";
 					locked = "1";
 
-					team = "1";
 					isInvalid = "0";
+					team = "1";
 				};
 				new AIObjective(AIODefendLocation) {
 					position = "-63.9721 -334.343 79.4384";
@@ -794,8 +791,8 @@ new SimGroup(MissionGroup) {
 					forceClientId = "-1";
 					locked = "1";
 
-					team = "1";
 					isInvalid = "0";
+					team = "1";
 				};
 				new AIObjective(AIOTouchObject) {
 					position = "-63.9721 -334.343 79.4384";
@@ -823,8 +820,8 @@ new SimGroup(MissionGroup) {
 					forceClientId = "-1";
 					locked = "1";
 
-					team = "1";
 					isInvalid = "0";
+					team = "1";
 				};
 				new AIObjective(AIORepairObject) {
 					position = "-71.9901 -334.708 87.2402";
@@ -851,8 +848,8 @@ new SimGroup(MissionGroup) {
 					forceClientId = "-1";
 					locked = "1";
 
-					team = "1";
 					isInvalid = "0";
+					team = "1";
 				};
 				new SimGroup(ObjectiveSet) {
 
@@ -883,9 +880,9 @@ new SimGroup(MissionGroup) {
 						forceClientId = "-1";
 						locked = "1";
 
-						group = "3343";
-						team = "1";
 						isInvalid = "0";
+						team = "1";
+						group = "3343";
 					};
 					new AIObjective(AIODeployEquipment) {
 						position = "385.823 344.538 50.5291";
@@ -912,9 +909,9 @@ new SimGroup(MissionGroup) {
 						forceClientId = "-1";
 						locked = "1";
 
-						group = "3343";
-						team = "1";
 						isInvalid = "0";
+						team = "1";
+						group = "3343";
 					};
 					new AIObjective(AIODeployEquipment) {
 						position = "400.703 409.258 50.8";
@@ -941,9 +938,9 @@ new SimGroup(MissionGroup) {
 						forceClientId = "-1";
 						locked = "1";
 
-						group = "3343";
-						team = "1";
 						isInvalid = "0";
+						team = "1";
+						group = "3343";
 					};
 					new AIObjective(AIODeployEquipment) {
 						position = "397.609 363.834 60.6696";
@@ -970,9 +967,9 @@ new SimGroup(MissionGroup) {
 						forceClientId = "-1";
 						locked = "0";
 
-						group = "3343";
-						team = "1";
 						isInvalid = "0";
+						team = "1";
+						group = "3343";
 					};
 				};
 				new SimGroup(ObjectiveSet) {
@@ -1004,9 +1001,9 @@ new SimGroup(MissionGroup) {
 						forceClientId = "-1";
 						locked = "1";
 
-						group = "3348";
-						team = "1";
 						isInvalid = "0";
+						team = "1";
+						group = "3348";
 					};
 					new AIObjective(AIODeployEquipment) {
 						position = "-213.463 474.2 69.5414";
@@ -1033,9 +1030,9 @@ new SimGroup(MissionGroup) {
 						forceClientId = "-1";
 						locked = "1";
 
-						group = "3348";
-						team = "1";
 						isInvalid = "0";
+						team = "1";
+						group = "3348";
 					};
 					new AIObjective(AIODeployEquipment) {
 						position = "-194.915 410.934 69.07";
@@ -1062,9 +1059,9 @@ new SimGroup(MissionGroup) {
 						forceClientId = "-1";
 						locked = "1";
 
-						group = "3348";
-						team = "1";
 						isInvalid = "0";
+						team = "1";
+						group = "3348";
 					};
 					new AIObjective(AIODeployEquipment) {
 						position = "-196.452 436.083 69.2254";
@@ -1091,9 +1088,9 @@ new SimGroup(MissionGroup) {
 						forceClientId = "-1";
 						locked = "0";
 
-						group = "3348";
-						team = "1";
 						isInvalid = "0";
+						team = "1";
+						group = "3348";
 					};
 				};
 				new SimGroup(ObjectiveSet) {
@@ -1125,9 +1122,9 @@ new SimGroup(MissionGroup) {
 						forceClientId = "-1";
 						locked = "1";
 
-						group = "3353";
-						team = "1";
 						isInvalid = "0";
+						team = "1";
+						group = "3353";
 					};
 					new AIObjective(AIODeployEquipment) {
 						position = "-38.8711 -340.989 68.0242";
@@ -1154,9 +1151,9 @@ new SimGroup(MissionGroup) {
 						forceClientId = "-1";
 						locked = "1";
 
-						group = "3353";
-						team = "1";
 						isInvalid = "0";
+						team = "1";
+						group = "3353";
 					};
 					new AIObjective(AIODeployEquipment) {
 						position = "-98.2266 -361.98 66.3655";
@@ -1183,9 +1180,9 @@ new SimGroup(MissionGroup) {
 						forceClientId = "-1";
 						locked = "1";
 
-						group = "3353";
-						team = "1";
 						isInvalid = "0";
+						team = "1";
+						group = "3353";
 					};
 					new AIObjective(AIODeployEquipment) {
 						position = "-67.1821 -328.063 78.2324";
@@ -1212,9 +1209,9 @@ new SimGroup(MissionGroup) {
 						forceClientId = "-1";
 						locked = "0";
 
-						group = "3353";
-						team = "1";
 						isInvalid = "0";
+						team = "1";
+						group = "3353";
 					};
 				};
 				new SimGroup(ObjectiveSet) {
@@ -1246,9 +1243,9 @@ new SimGroup(MissionGroup) {
 						forceClientId = "-1";
 						locked = "1";
 
-						group = "3358";
-						team = "1";
 						isInvalid = "0";
+						team = "1";
+						group = "3358";
 					};
 					new AIObjective(AIODeployEquipment) {
 						position = "379.247 -277.93 69.7168";
@@ -1275,9 +1272,9 @@ new SimGroup(MissionGroup) {
 						forceClientId = "-1";
 						locked = "1";
 
-						group = "3358";
-						team = "1";
 						isInvalid = "0";
+						team = "1";
+						group = "3358";
 					};
 					new AIObjective(AIODeployEquipment) {
 						position = "335.588 -230.334 73.8635";
@@ -1304,9 +1301,9 @@ new SimGroup(MissionGroup) {
 						forceClientId = "-1";
 						locked = "1";
 
-						group = "3358";
-						team = "1";
 						isInvalid = "0";
+						team = "1";
+						group = "3358";
 					};
 					new AIObjective(AIODeployEquipment) {
 						position = "333.331 -256.922 90.2415";
@@ -1333,9 +1330,9 @@ new SimGroup(MissionGroup) {
 						forceClientId = "-1";
 						locked = "0";
 
-						group = "3358";
-						team = "1";
 						isInvalid = "0";
+						team = "1";
+						group = "3358";
 					};
 				};
 			};
@@ -1393,8 +1390,8 @@ new SimGroup(MissionGroup) {
 					forceClientId = "-1";
 					locked = "1";
 
-					team = "2";
 					isInvalid = "0";
+					team = "2";
 				};
 				new AIObjective(AIORepairObject) {
 					position = "-198.372 436.956 82.0292";
@@ -1421,8 +1418,8 @@ new SimGroup(MissionGroup) {
 					forceClientId = "-1";
 					locked = "1";
 
-					team = "2";
 					isInvalid = "0";
+					team = "2";
 				};
 				new AIObjective(AIORepairObject) {
 					position = "-206.68 436.629 82.0071";
@@ -1449,8 +1446,8 @@ new SimGroup(MissionGroup) {
 					forceClientId = "-1";
 					locked = "1";
 
-					team = "2";
 					isInvalid = "0";
+					team = "2";
 				};
 				new AIObjective(AIOTouchObject) {
 					position = "406.409 361.085 77.1558";
@@ -1478,8 +1475,8 @@ new SimGroup(MissionGroup) {
 					forceClientId = "-1";
 					locked = "1";
 
-					team = "2";
 					isInvalid = "0";
+					team = "2";
 				};
 				new AIObjective(AIORepairObject) {
 					position = "395.167 369.591 65.1158";
@@ -1506,8 +1503,8 @@ new SimGroup(MissionGroup) {
 					forceClientId = "-1";
 					locked = "1";
 
-					team = "2";
 					isInvalid = "0";
+					team = "2";
 				};
 				new AIObjective(AIORepairObject) {
 					position = "402.316 359.441 59.217";
@@ -1534,8 +1531,8 @@ new SimGroup(MissionGroup) {
 					forceClientId = "-1";
 					locked = "1";
 
-					team = "2";
 					isInvalid = "0";
+					team = "2";
 				};
 				new AIObjective(AIORepairObject) {
 					position = "-59.6764 -327.717 87.3327";
@@ -1562,8 +1559,8 @@ new SimGroup(MissionGroup) {
 					forceClientId = "-1";
 					locked = "1";
 
-					team = "2";
 					isInvalid = "0";
+					team = "2";
 				};
 				new AIObjective(AIORepairObject) {
 					position = "335.204 -262.955 73.268";
@@ -1590,8 +1587,8 @@ new SimGroup(MissionGroup) {
 					forceClientId = "-1";
 					locked = "1";
 
-					team = "2";
 					isInvalid = "0";
+					team = "2";
 				};
 				new AIObjective(AIOTouchObject) {
 					position = "328.674 -256.375 72.6995";
@@ -1619,8 +1616,8 @@ new SimGroup(MissionGroup) {
 					forceClientId = "-1";
 					locked = "1";
 
-					team = "2";
 					isInvalid = "0";
+					team = "2";
 				};
 				new AIObjective(AIOTouchObject) {
 					position = "-63.9721 -334.343 79.4384";
@@ -1648,8 +1645,8 @@ new SimGroup(MissionGroup) {
 					forceClientId = "-1";
 					locked = "1";
 
-					team = "2";
 					isInvalid = "0";
+					team = "2";
 				};
 				new AIObjective(AIORepairObject) {
 					position = "-71.9901 -334.708 87.2402";
@@ -1676,8 +1673,8 @@ new SimGroup(MissionGroup) {
 					forceClientId = "-1";
 					locked = "1";
 
-					team = "2";
 					isInvalid = "0";
+					team = "2";
 				};
 				new SimGroup(ObjectiveSet) {
 
@@ -1708,9 +1705,9 @@ new SimGroup(MissionGroup) {
 						forceClientId = "-1";
 						locked = "1";
 
-						group = "3378";
-						team = "2";
 						isInvalid = "0";
+						team = "2";
+						group = "3378";
 					};
 					new AIObjective(AIODeployEquipment) {
 						position = "385.823 344.538 50.5291";
@@ -1737,9 +1734,9 @@ new SimGroup(MissionGroup) {
 						forceClientId = "-1";
 						locked = "1";
 
-						group = "3378";
-						team = "2";
 						isInvalid = "0";
+						team = "2";
+						group = "3378";
 					};
 					new AIObjective(AIODeployEquipment) {
 						position = "400.703 409.258 50.8";
@@ -1766,9 +1763,9 @@ new SimGroup(MissionGroup) {
 						forceClientId = "-1";
 						locked = "1";
 
-						group = "3378";
-						team = "2";
 						isInvalid = "0";
+						team = "2";
+						group = "3378";
 					};
 					new AIObjective(AIODeployEquipment) {
 						position = "397.531 363.855 60.6663";
@@ -1795,9 +1792,9 @@ new SimGroup(MissionGroup) {
 						forceClientId = "-1";
 						locked = "0";
 
-						group = "3378";
-						team = "2";
 						isInvalid = "0";
+						team = "2";
+						group = "3378";
 					};
 				};
 				new SimGroup(ObjectiveSet) {
@@ -1829,9 +1826,9 @@ new SimGroup(MissionGroup) {
 						forceClientId = "-1";
 						locked = "1";
 
-						group = "3383";
-						team = "2";
 						isInvalid = "0";
+						team = "2";
+						group = "3383";
 					};
 					new AIObjective(AIODeployEquipment) {
 						position = "-213.463 474.2 69.5414";
@@ -1858,9 +1855,9 @@ new SimGroup(MissionGroup) {
 						forceClientId = "-1";
 						locked = "1";
 
-						group = "3383";
-						team = "2";
 						isInvalid = "0";
+						team = "2";
+						group = "3383";
 					};
 					new AIObjective(AIODeployEquipment) {
 						position = "-194.915 410.934 69.07";
@@ -1887,9 +1884,9 @@ new SimGroup(MissionGroup) {
 						forceClientId = "-1";
 						locked = "1";
 
-						group = "3383";
-						team = "2";
 						isInvalid = "0";
+						team = "2";
+						group = "3383";
 					};
 					new AIObjective(AIODeployEquipment) {
 						position = "-196.672 435.882 69.7214";
@@ -1916,9 +1913,9 @@ new SimGroup(MissionGroup) {
 						forceClientId = "-1";
 						locked = "0";
 
-						group = "3383";
-						team = "2";
 						isInvalid = "0";
+						team = "2";
+						group = "3383";
 					};
 				};
 				new SimGroup(ObjectiveSet) {
@@ -1950,9 +1947,9 @@ new SimGroup(MissionGroup) {
 						forceClientId = "-1";
 						locked = "1";
 
-						group = "3388";
-						team = "2";
 						isInvalid = "0";
+						team = "2";
+						group = "3388";
 					};
 					new AIObjective(AIODeployEquipment) {
 						position = "-38.8711 -340.989 68.0242";
@@ -1979,9 +1976,9 @@ new SimGroup(MissionGroup) {
 						forceClientId = "-1";
 						locked = "1";
 
-						group = "3388";
-						team = "2";
 						isInvalid = "0";
+						team = "2";
+						group = "3388";
 					};
 					new AIObjective(AIODeployEquipment) {
 						position = "-98.2266 -361.98 66.3655";
@@ -2008,9 +2005,9 @@ new SimGroup(MissionGroup) {
 						forceClientId = "-1";
 						locked = "1";
 
-						group = "3388";
-						team = "2";
 						isInvalid = "0";
+						team = "2";
+						group = "3388";
 					};
 					new AIObjective(AIODeployEquipment) {
 						position = "-67.0291 -327.63 77.9927";
@@ -2037,9 +2034,9 @@ new SimGroup(MissionGroup) {
 						forceClientId = "-1";
 						locked = "0";
 
-						group = "3388";
-						team = "2";
 						isInvalid = "0";
+						team = "2";
+						group = "3388";
 					};
 				};
 				new SimGroup(ObjectiveSet) {
@@ -2071,9 +2068,9 @@ new SimGroup(MissionGroup) {
 						forceClientId = "-1";
 						locked = "1";
 
-						group = "3393";
-						team = "2";
 						isInvalid = "0";
+						team = "2";
+						group = "3393";
 					};
 					new AIObjective(AIODeployEquipment) {
 						position = "379.247 -277.93 69.7168";
@@ -2100,9 +2097,9 @@ new SimGroup(MissionGroup) {
 						forceClientId = "-1";
 						locked = "1";
 
-						group = "3393";
-						team = "2";
 						isInvalid = "0";
+						team = "2";
+						group = "3393";
 					};
 					new AIObjective(AIODeployEquipment) {
 						position = "335.588 -230.334 73.8635";
@@ -2129,9 +2126,9 @@ new SimGroup(MissionGroup) {
 						forceClientId = "-1";
 						locked = "1";
 
-						group = "3393";
-						team = "2";
 						isInvalid = "0";
+						team = "2";
+						group = "3393";
 					};
 					new AIObjective(AIODeployEquipment) {
 						position = "328.481 -260.225 90.4923";
@@ -2158,9 +2155,9 @@ new SimGroup(MissionGroup) {
 						forceClientId = "-1";
 						locked = "0";
 
-						group = "3393";
-						team = "2";
 						isInvalid = "0";
+						team = "2";
+						group = "3393";
 					};
 				};
 			};

@@ -16,8 +16,8 @@
 new SimGroup(MissionGroup) {
 
 	powerCount = "0";
-	CTF_scoreLimit = "100";
 	musicTrack = "badlands";
+	CTF_scoreLimit = "100";
 	cdTrack = "6";
 
 	new MissionArea(MissionArea) {
@@ -61,14 +61,14 @@ new SimGroup(MissionGroup) {
 		cullDensity = "0.3";
 		customArea = "0 0 0 0";
 
+		XDimOverSize = "0";
 		position = "0 0 0 1";
-		YDimOverSize = "0";
+		GraphFile = "BeggarsRun.nav";
 		conjoinBowlDev = "20";
 		rotation = "0 0 0 0";
-		GraphFile = "BeggarsRun.nav";
-		XDimOverSize = "0";
 		scale = "1 1 1";
 		coverage = "0";
+		YDimOverSize = "0";
 	};
 	new Sky(Sky) {
 		position = "0 0 0";
@@ -80,13 +80,13 @@ new SimGroup(MissionGroup) {
 		cloudSpeed1 = "0.0001";
 		cloudSpeed2 = "0.0002";
 		cloudSpeed3 = "0.0003";
-		visibleDistance = "1000";
+		visibleDistance = "600";
 		useSkyTextures = "1";
 		renderBottomTexture = "0";
 		SkySolidColor = "0.365000 0.390000 0.420000 0.000000";
-		fogDistance = "800";
+		fogDistance = "500";
 		fogColor = "0.550000 0.450000 0.380000 1.000000";
-		fogVolume1 = "0 0 0";
+		fogVolume1 = "700 0 300";
 		fogVolume2 = "0 0 0";
 		fogVolume3 = "0 0 0";
 		materialList = "sky_desert_blue.dml";
@@ -116,24 +116,6 @@ new SimGroup(MissionGroup) {
 
 				powerCount = "0";
 
-				new Item(-1) {
-					position = "137.533 -17.0372 145.484";
-					rotation = "1 0 0 0";
-					scale = "1 1 1";
-					dataBlock = "flag";
-					lockCount = "0";
-					homingCount = "0";
-					collideable = "0";
-					static = "1";
-					rotate = "1";
-
-					isHome = "1";
-					team = "1";
-					Trigger = "8059";
-					originalPosition = "138.047 -11.3751 166.084 1 0 0 0";
-					Target = "33";
-					className = "FlagObj";
-				};
 				new SimGroup() {
 
 					powerCount = "0";
@@ -175,9 +157,9 @@ new SimGroup(MissionGroup) {
 					forceClientId = "-1";
 					locked = "0";
 
+					isInvalid = "0";
 					team = "1";
 					gameType = "all";
-					isInvalid = "0";
 				};
 				new AIObjective(AIOTouchObject) {
 					position = "146.924 -17.5791 303.358";
@@ -203,9 +185,9 @@ new SimGroup(MissionGroup) {
 					forceClientId = "-1";
 					locked = "0";
 
+					isInvalid = "0";
 					team = "1";
 					gameType = "all";
-					isInvalid = "0";
 				};
 				new AIObjective(AIOTouchObject) {
 					position = "-12.2639 -17.5462 303.629";
@@ -231,9 +213,9 @@ new SimGroup(MissionGroup) {
 					forceClientId = "-1";
 					locked = "0";
 
+					isInvalid = "0";
 					team = "1";
 					gameType = "all";
-					isInvalid = "0";
 				};
 				new AIObjective(AIOTouchObject) {
 					position = "-12.2639 -17.5462 303.629";
@@ -259,9 +241,9 @@ new SimGroup(MissionGroup) {
 					forceClientId = "-1";
 					locked = "0";
 
+					isInvalid = "0";
 					team = "1";
 					gameType = "all";
-					isInvalid = "0";
 				};
 				new AIObjective(AIODefendLocation) {
 					position = "146.924 -17.5791 303.358";
@@ -287,9 +269,9 @@ new SimGroup(MissionGroup) {
 					forceClientId = "-1";
 					locked = "0";
 
+					isInvalid = "0";
 					team = "1";
 					gameType = "all";
-					isInvalid = "0";
 				};
 				new AIObjective(AIOAttackPlayer) {
 					position = "146.924 -17.5791 303.358";
@@ -315,9 +297,9 @@ new SimGroup(MissionGroup) {
 					forceClientId = "-1";
 					locked = "0";
 
+					isInvalid = "0";
 					team = "1";
 					gameType = "all";
-					isInvalid = "0";
 				};
 				new SimGroup(FUCKKKKKKK) {
 
@@ -357,9 +339,9 @@ new SimGroup(MissionGroup) {
 					forceClientId = "-1";
 					locked = "0";
 
+					isInvalid = "0";
 					team = "2";
 					gameType = "all";
-					isInvalid = "0";
 				};
 				new AIObjective(AIOTouchObject) {
 					position = "-12.2639 -17.5462 303.629";
@@ -385,9 +367,9 @@ new SimGroup(MissionGroup) {
 					forceClientId = "-1";
 					locked = "0";
 
+					isInvalid = "0";
 					team = "2";
 					gameType = "all";
-					isInvalid = "0";
 				};
 				new AIObjective(AIOAttackPlayer) {
 					position = "-12.2639 -17.5462 303.629";
@@ -413,9 +395,9 @@ new SimGroup(MissionGroup) {
 					forceClientId = "-1";
 					locked = "0";
 
+					isInvalid = "0";
 					team = "2";
 					gameType = "all";
-					isInvalid = "0";
 				};
 				new AIObjective(AIOTouchObject) {
 					position = "146.924 -17.5791 303.358";
@@ -441,9 +423,9 @@ new SimGroup(MissionGroup) {
 					forceClientId = "-1";
 					locked = "0";
 
+					isInvalid = "0";
 					team = "2";
 					gameType = "all";
-					isInvalid = "0";
 				};
 				new AIObjective(AIOTouchObject) {
 					position = "146.924 -17.5791 303.358";
@@ -469,9 +451,9 @@ new SimGroup(MissionGroup) {
 					forceClientId = "-1";
 					locked = "0";
 
+					isInvalid = "0";
 					team = "2";
 					gameType = "all";
-					isInvalid = "0";
 				};
 				new AIObjective(AIOTouchObject) {
 					position = "146.924 -17.5791 303.358";
@@ -497,9 +479,9 @@ new SimGroup(MissionGroup) {
 					forceClientId = "-1";
 					locked = "0";
 
+					isInvalid = "0";
 					team = "2";
 					gameType = "all";
-					isInvalid = "0";
 				};
 				new AIObjective(AIOTouchObject) {
 					position = "-12.1478 -17.4974 304.513";
@@ -525,15 +507,15 @@ new SimGroup(MissionGroup) {
 					forceClientId = "-1";
 					locked = "0";
 
+					isInvalid = "0";
 					team = "2";
 					gameType = "all";
-					isInvalid = "0";
 				};
 			};
 			new SimGroup(spawnspheres) {
 
-				powerCount = "0";
 				team = "1";
+				powerCount = "0";
 
 				new SpawnSphere() {
 					position = "-11.7677 -15.9608 184.389";
@@ -560,7 +542,7 @@ new SimGroup(MissionGroup) {
 					outdoorWeight = "0";
 				};
 				new SpawnSphere() {
-					position = "56.1955 -114.434 185.645";
+					position = "60.7955 -108.834 189.645";
 					rotation = "1 0 0 0";
 					scale = "1 1 1";
 					dataBlock = "SpawnSphereMarker";
@@ -627,7 +609,7 @@ new SimGroup(MissionGroup) {
 			powerCount = "0";
 
 			new InteriorInstance(InteriorInstance) {
-				position = "253.954 -75.2003 508.991";
+				position = "253.828 -75.1975 508.991";
 				rotation = "1 0 0 0";
 				scale = "1 15 23";
 				interiorFile = "pwall1.dif";
@@ -646,7 +628,7 @@ new SimGroup(MissionGroup) {
 				new InteriorInstance(InteriorInstance) {
 					position = "135.454 -16.1194 144.692";
 					rotation = "1 1.30523e-10 -1.79345e-13 180.091";
-					scale = "1.2 2.7 2.1";
+					scale = "1.2 2.7 2.2";
 					interiorFile = "nef_ramp1.dif";
 					showTerrainInside = "0";
 
@@ -654,7 +636,7 @@ new SimGroup(MissionGroup) {
 				};
 			};
 			new InteriorInstance(InteriorInstance) {
-				position = "196.422 -138.804 509.191";
+				position = "196.647 -137.607 509.191";
 				rotation = "0 0 -1 89.9544";
 				scale = "1 15.25 23";
 				interiorFile = "pwall1.dif";
@@ -672,13 +654,70 @@ new SimGroup(MissionGroup) {
 				team = "0";
 			};
 			new InteriorInstance(InteriorInstance) {
-				position = "13.2801 -75.7894 508.991";
+				position = "14.1736 -76.0464 508.991";
 				rotation = "1 0 0 0";
 				scale = "1 15 23";
 				interiorFile = "pwall1.dif";
 				showTerrainInside = "0";
 
 				team = "0";
+			};
+			new Item(Team0Flag1) {
+				position = "137.533 -16.9053 145.397";
+				rotation = "1 0 0 0";
+				scale = "1 1 1";
+				dataBlock = "flag";
+				lockCount = "0";
+				homingCount = "0";
+				collideable = "0";
+				static = "0";
+				rotate = "1";
+
+				returnThread = "10424";
+				team = "0";
+				Trigger = "7127";
+				originalPosition = "137.575 -16.9474 145.389 1 0 0 0";
+				bounced = "0";
+				isHome = "1";
+				searchSchedule = "13268";
+				className = "FlagObj";
+				Target = "34";
+			};
+			new InteriorInstance(InteriorInstance) {
+				position = "89.4801 40.9745 165.065";
+				rotation = "1 0 0 0";
+				scale = "1.8 1.2 1.8";
+				interiorFile = "pplat5.dif";
+				showTerrainInside = "0";
+			};
+			new InteriorInstance(InteriorInstance) {
+				position = "182.88 -79.5237 165.438";
+				rotation = "1 0 0 0";
+				scale = "1.8 1.2 1.8";
+				interiorFile = "pplat5.dif";
+				showTerrainInside = "0";
+			};
+			new InteriorInstance(InteriorInstance) {
+				position = "181.871 -78.5289 141.992";
+				rotation = "0 0 -1 60.1606";
+				scale = "0.5 0.5 0.4";
+				interiorFile = "pspir5.dif";
+				showTerrainInside = "0";
+			};
+			new InteriorInstance(InteriorInstance) {
+				position = "88.9559 40.945 141.709";
+				rotation = "1 0 0 0";
+				scale = "0.5 0.5 0.4";
+				interiorFile = "pspir5.dif";
+				showTerrainInside = "0";
+			};
+			new FileObject() {
+			};
+			new FileObject() {
+			};
+			new FileObject() {
+			};
+			new FileObject() {
 			};
 		};
 	};
@@ -744,22 +783,22 @@ new SimGroup(MissionGroup) {
 	new FileObject() {
 	};
 	new InteriorInstance() {
-		position = "61.0249 -122.32 192.808";
+		position = "65.6249 -116.72 196.808";
 		rotation = "1 0 0 0";
 		scale = "1 1 1";
 		interiorFile = "pplat1.dif";
 		showTerrainInside = "0";
 	};
-	new InteriorInstance() {
-		position = "26.5723 23.5688 152.898";
+	new InteriorInstance(InteriorInstance) {
+		position = "24.8972 -5.86519 146.698";
 		rotation = "1 0 0 0";
-		scale = "1 1 1";
+		scale = "0.7 1 1";
 		interiorFile = "prockc.dif";
 		showTerrainInside = "0";
 	};
 	new InteriorInstance() {
-		position = "252.471 86.8547 141.456";
-		rotation = "1 0 0 0";
+		position = "245.311 87.5673 144.856";
+		rotation = "0 0 -1 16.6159";
 		scale = "1 1 1";
 		interiorFile = "procka.dif";
 		showTerrainInside = "0";
@@ -771,10 +810,10 @@ new SimGroup(MissionGroup) {
 		interiorFile = "prock7.dif";
 		showTerrainInside = "0";
 	};
-	new InteriorInstance() {
-		position = "244.541 -64.6781 156.035";
+	new InteriorInstance(InteriorInstance) {
+		position = "246.973 -44.282 145.635";
 		rotation = "-9.03566e-10 1.20779e-08 1 180.091";
-		scale = "1 1 1";
+		scale = "0.7 1 1";
 		interiorFile = "prockc.dif";
 		showTerrainInside = "0";
 	};
@@ -786,7 +825,7 @@ new SimGroup(MissionGroup) {
 		showTerrainInside = "0";
 	};
 	new InteriorInstance() {
-		position = "238.424 -102.526 144.524";
+		position = "236.201 -107.004 144.524";
 		rotation = "0 0 -1 63.5983";
 		scale = "1 1 1";
 		interiorFile = "prock7.dif";
@@ -800,7 +839,7 @@ new SimGroup(MissionGroup) {
 		showTerrainInside = "0";
 	};
 	new Item() {
-		position = "61.2335 -122.405 195.509";
+		position = "65.8335 -116.805 199.509";
 		rotation = "1 0 0 0";
 		scale = "1 1 1";
 		dataBlock = "RepairKit";
