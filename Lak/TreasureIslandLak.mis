@@ -1,5 +1,5 @@
 // DisplayName = Treasure Island
-// MissionTypes = LakRabbit
+// MissionTypes = LakRabbit LakZM TeamLak
 
 //--- MISSION QUOTE BEGIN ---
 // X marks the spot.
@@ -14,11 +14,11 @@
 //--- OBJECT WRITE BEGIN ---
 new SimGroup(MissionGroup) {
 
-	musicTrack = "lush";
-	CTF_timeLimit = "25";
 	CTF_scoreLimit = "6";
-	powerCount = "0";
+	CTF_timeLimit = "25";
 	cdTrack = "2";
+	powerCount = "0";
+	musicTrack = "lush";
 
 	new MissionArea(MissionArea) {
 		area = "-560 -656 1072 1344";
@@ -33,7 +33,7 @@ new SimGroup(MissionGroup) {
 		scale = "1 1 1";
 		direction = "0.57735 0.57735 -0.57735";
 		color = "0.600000 0.600000 0.600000 1.000000";
-		ambient = "0.600000 0.600000 0.600000 1.000000";
+		ambient = "0.500000 0.500000 0.600000 1.000000";
 		texture[0] = "special/sunFlare";
 		texture[1] = "special/sunFlare02";
 		texture[2] = "special/LensFlare/flare01";
@@ -54,25 +54,25 @@ new SimGroup(MissionGroup) {
 		terrainFile = "TreasureIsland.ter";
 		squareSize = "8";
 
+		locked = "true";
+		position = "-1024 -1024 0";
 		hazeDistance = "50";
 		visibleDistance = "450";
-		position = "-1024 -1024 0";
-		locked = "true";
 	};
 	new NavigationGraph(NavGraph) {
 		conjoinAngleDev = "45";
 		cullDensity = "0.3";
 		customArea = "0 0 0 0";
 
-		XDimOverSize = "0";
+		locked = "true";
 		YDimOverSize = "0";
-		scale = "1 1 1";
+		position = "0 0 0 1";
 		GraphFile = "TreasureIsland.nav";
 		coverage = "0";
-		position = "0 0 0 1";
-		conjoinBowlDev = "20";
 		rotation = "0 0 0 0";
-		locked = "true";
+		conjoinBowlDev = "20";
+		scale = "1 1 1";
+		XDimOverSize = "0";
 	};
 	new SimGroup(Ambiance) {
 
@@ -618,12 +618,12 @@ new SimGroup(MissionGroup) {
 		cloudSpeed1 = "0.01";
 		cloudSpeed2 = "0.02";
 		cloudSpeed3 = "0.03";
-		visibleDistance = "850";
+		visibleDistance = "600";
 		useSkyTextures = "1";
 		renderBottomTexture = "0";
 		SkySolidColor = "0.390000 0.390000 0.390000 0.000000";
-		fogDistance = "800";
-		fogColor = "0.800000 0.800000 0.900000 1.000000";
+		fogDistance = "350";
+		fogColor = "0.700000 0.700000 0.800000 1.000000";
 		fogVolume1 = "1540 0 350";
 		fogVolume2 = "0 0 0";
 		fogVolume3 = "0 0 0";
@@ -656,36 +656,40 @@ new SimGroup(MissionGroup) {
 		envMapIntensity = "0.4";
 		removeWetEdges = "0";
 
-		textureSize = "32 32";
-		floodFill = "1";
-		extent = "100 100 10";
-		params1 = "0.63 -2.41 0.33 0.21";
-		params0 = "0.32 -0.67 0.066 0.5";
-		params2 = "0.39 0.39 0.2 0.133";
 		params3 = "1.21 -0.61 0.13 -0.33";
+		params1 = "0.63 -2.41 0.33 0.21";
+		floodFill = "1";
+		params0 = "0.32 -0.67 0.066 0.5";
 		seedPoints = "0 0 1 0 1 1 0 1";
+		params2 = "0.39 0.39 0.2 0.133";
+		extent = "100 100 10";
+		textureSize = "32 32";
 	};
-	new SimGroup(Teams)
-	{
+	new SimGroup(Teams) {
+
 		powerCount = "0";
 
-		new SimGroup(team0)
-		{
+		new SimGroup(Team0) {
+
 			powerCount = "0";
 
-			new Item() {
-				position = "-24.1356 3.93848 91.0745";
+			new Item(Team0Flag1) {
+				position = "-18.7026 7.13231 94.4745";
 				rotation = "1 0 0 0";
 				scale = "1 1 1";
-				dataBlock = "FLAG";
+				dataBlock = "flag";
 				lockCount = "0";
 				homingCount = "0";
 				collideable = "0";
 				static = "1";
-				rotate = "0";
+				rotate = "1";
 
-				locked = "true";
+				Target = "33";
+				team = "0";
+				Trigger = "11034";
+				isHome = "1";
 				className = "FlagObj";
+				originalPosition = "-24.1356 3.93848 91.0745 1 0 0 0";
 			};
 		};
 	};
@@ -695,36 +699,35 @@ new SimGroup(MissionGroup) {
 
 		new Camera() {
 			position = "-67.4071 611.556 224.07";
-			rotation = "1 0 0 0";
+			rotation = "-0.0389881 -0.0848332 0.995632 229.176";
 			scale = "1 1 1";
 			dataBlock = "Observer";
 			lockCount = "0";
 			homingCount = "0";
 
-			team = "0";
 			locked = "false";
+			team = "0";
 		};
 		new Camera() {
 			position = "2.3521 -596.994 227.54";
-			rotation = "1 0 0 0";
+			rotation = "0.331026 -0.103218 0.937959 36.7773";
 			scale = "1 1 1";
 			dataBlock = "Observer";
 			lockCount = "0";
 			homingCount = "0";
 
-			team = "0";
 			locked = "false";
+			team = "0";
 		};
 		new Camera() {
-			position = "-8.35488 -36.6744 194.923";
-			rotation = "1 0 0 0";
+			position = "-1.95488 -85.4744 194.923";
+			rotation = "0.956154 0.121938 -0.266273 51.1835";
 			scale = "1 1 1";
 			dataBlock = "Observer";
 			lockCount = "0";
 			homingCount = "0";
 
 			team = "0";
-			locked = "true";
 		};
 	};
 	new SimGroup(Statics) {
@@ -732,33 +735,40 @@ new SimGroup(MissionGroup) {
 		powerCount = "0";
 
 		new TSStatic() {
-			position = "126.135 -207.433 155.742";
+			position = "126.135 -199.233 157.342";
 			rotation = "1 0 0 0";
-			scale = "2 2 2";
+			scale = "1 1 1";
 			shapeName = "borg19.dts";
 
 			locked = "false";
 		};
 		new TSStatic() {
-			position = "-168.766 182.577 146.776";
+			position = "-172.166 182.577 147.176";
 			rotation = "1 0 0 0";
-			scale = "2 2 2";
+			scale = "1 1 1";
 			shapeName = "borg16.dts";
 
 			locked = "false";
 		};
 		new TSStatic() {
-			position = "430.624 -235.429 157.546";
+			position = "439.202 -246.239 157.546";
 			rotation = "0 0 1 51.5662";
-			scale = "2 2 2";
+			scale = "1 1 1";
 			shapeName = "borg19.dts";
 		};
 		new TSStatic() {
-			position = "-485.203 225.408 161.14";
+			position = "-485.203 225.408 161.94";
 			rotation = "1 0 0 0";
-			scale = "2 2 2";
+			scale = "1 1 1";
 			shapeName = "borg17.dts";
 		};
+	};
+	new InteriorInstance() {
+		position = "-18.6584 7.14795 59.4163";
+		rotation = "0 0 1 46.9825";
+		scale = "1 1 1";
+		interiorFile = "bbunkc.dif";
+		showTerrainInside = "0";
 	};
 };
 //--- OBJECT WRITE END ---

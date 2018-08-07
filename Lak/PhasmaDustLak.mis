@@ -1,5 +1,5 @@
 // DisplayName = Phasma Dust
-// MissionTypes = LakRabbit
+// MissionTypes = LakRabbit LakZM TeamLak
 
 //--- MISSION QUOTE BEGIN ---
 // From the dust arose a land like no other.
@@ -14,11 +14,11 @@
 //--- OBJECT WRITE BEGIN ---
 new SimGroup(MissionGroup) {
 
+	cdTrack = "2";
+	powerCount = "0";
+	CTF_scoreLimit = "4";
 	musicTrack = "lush";
 	CTF_timeLimit = "25";
-	CTF_scoreLimit = "4";
-	powerCount = "0";
-	cdTrack = "2";
 
 	new MissionArea(MissionArea) {
 		area = "-648 -640 1280 1264";
@@ -32,7 +32,7 @@ new SimGroup(MissionGroup) {
 		rotation = "1 0 0 0";
 		scale = "1 1 1";
 		direction = "0.622506 0.622506 -0.474313";
-		color = "0.800000 0.800000 0.800000 1.000000";
+		color = "0.600000 0.600000 0.600000 1.000000";
 		ambient = "0.650000 0.650000 0.650000 1.000000";
 		texture[0] = "special/sunFlare";
 		texture[1] = "special/sunFlare02";
@@ -56,23 +56,23 @@ new SimGroup(MissionGroup) {
 
 		hazeDistance = "250";
 		visibleDistance = "1200";
-		position = "-1024 -1024 0";
 		locked = "true";
+		position = "-1024 -1024 0";
 	};
 	new NavigationGraph(NavGraph) {
 		conjoinAngleDev = "70";
 		cullDensity = "0.3";
 		customArea = "0 0 0 0";
 
+		rotation = "0 0 0 0";
+		GraphFile = "PhasmaDust.nav";
 		XDimOverSize = "0";
 		YDimOverSize = "0";
 		scale = "1 1 1";
-		GraphFile = "PhasmaDust.nav";
 		coverage = "0";
+		locked = "true";
 		position = "0 0 0 1";
 		conjoinBowlDev = "20";
-		rotation = "0 0 0 0";
-		locked = "true";
 	};
 	new SimGroup(Ambiance) {
 
@@ -248,8 +248,8 @@ new SimGroup(MissionGroup) {
 		high_fogVolume2 = "-1 0 0";
 		high_fogVolume3 = "-1 0 0";
 
-		cloudSpeed0 = "0.000000 0.000000";
 		locked = "true";
+		cloudSpeed0 = "0.000000 0.000000";
 	};
 	new WaterBlock() {
 		position = "-1024 -1024 50.5442";
@@ -265,36 +265,40 @@ new SimGroup(MissionGroup) {
 		envMapIntensity = "0.8";
 		removeWetEdges = "0";
 
+		seedPoints = "0 0 1 0 1 1 0 1";
+		params3 = "1.21 -0.61 0.13 -0.33";
+		params2 = "0.39 0.39 0.2 0.133";
+		params1 = "0.63 -2.41 0.33 0.21";
 		textureSize = "32 32";
 		floodFill = "1";
 		extent = "100 100 10";
-		params1 = "0.63 -2.41 0.33 0.21";
 		params0 = "0.32 -0.67 0.066 0.5";
-		params2 = "0.39 0.39 0.2 0.133";
-		params3 = "1.21 -0.61 0.13 -0.33";
-		seedPoints = "0 0 1 0 1 1 0 1";
 	};
-	new SimGroup(Teams)
-	{
+	new SimGroup(Teams) {
+
 		powerCount = "0";
 
-		new SimGroup(team0)
-		{
+		new SimGroup(Team0) {
+
 			powerCount = "0";
 
-			new Item() {
-				position = "-4.59602 -3.57884 126.754";
+			new Item(Team0Flag1) {
+				position = "-4.59602 -3.57884 125.554";
 				rotation = "1 0 0 0";
 				scale = "1 1 1";
-				dataBlock = "FLAG";
+				dataBlock = "flag";
 				lockCount = "0";
 				homingCount = "0";
 				collideable = "0";
 				static = "1";
-				rotate = "0";
+				rotate = "1";
 
-				locked = "true";
+				team = "0";
+				Trigger = "5130";
+				isHome = "1";
 				className = "FlagObj";
+				Target = "33";
+				originalPosition = "-4.59602 -3.57884 126.554 1 0 0 0";
 			};
 		};
 	};
@@ -303,37 +307,33 @@ new SimGroup(MissionGroup) {
 		powerCount = "0";
 
 		new Camera() {
-			position = "-552.575 -563.614 304.55";
-			rotation = "1 0 0 0";
+			position = "-553.88 -562.374 304.55";
+			rotation = "0.28287 -0.114393 0.952312 46.0172";
 			scale = "1 1 1";
 			dataBlock = "Observer";
 			lockCount = "0";
 			homingCount = "0";
 
 			team = "0";
-			locked = "true";
 		};
 		new Camera() {
-			position = "-21.3965 -19.5873 181.748";
-			rotation = "1 0 0 0";
+			position = "-21.3965 -56.5873 131.348";
+			rotation = "0 0 1 20.0535";
 			scale = "1 1 1";
 			dataBlock = "Observer";
 			lockCount = "0";
 			homingCount = "0";
 
 			team = "0";
-			locked = "true";
 		};
 		new Camera() {
-			position = "557.396 561.469 295.462";
-			rotation = "1 0 0 0";
+			position = "550.467 555.201 293.104";
+			rotation = "-0.0517196 -0.123588 0.990985 225.049";
 			scale = "1 1 1";
 			dataBlock = "Observer";
 			lockCount = "0";
 			homingCount = "0";
 
-			team = "0";
-			locked = "true";
 		};
 	};
 	new SimGroup(Statics) {
@@ -1147,6 +1147,13 @@ new SimGroup(MissionGroup) {
 				shapeName = "borg16.dts";
 			};
 		};
+	};
+	new InteriorInstance() {
+		position = "2.58841 6.8823 53.5022";
+		rotation = "-0.338196 0.941075 -0.00142163 180.453";
+		scale = "1 1 1";
+		interiorFile = "bmisc_-nef_flagstand1_x.dif";
+		showTerrainInside = "0";
 	};
 };
 //--- OBJECT WRITE END ---
