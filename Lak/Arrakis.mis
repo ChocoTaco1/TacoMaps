@@ -13,10 +13,10 @@
 //--- OBJECT WRITE BEGIN ---
 new SimGroup(MissionGroup) {
 
-	cdTrack = "2";
-	CTF_scoreLimit = "6";
-	powerCount = "0";
 	musicTrack = "desert";
+	cdTrack = "2";
+	powerCount = "0";
+	CTF_scoreLimit = "6";
 
 	new MissionArea(MissionArea) {
 		area = "-512 -384 1040 1040";
@@ -83,14 +83,14 @@ new SimGroup(MissionGroup) {
 		cullDensity = "0.3";
 		customArea = "0 0 0 0";
 
-		conjoinBowlDev = "20";
 		locked = "true";
+		XDimOverSize = "0";
 		position = "0 0 0 1";
+		GraphFile = "MissionBlank.nav";
 		coverage = "0";
 		YDimOverSize = "0";
-		GraphFile = "MissionBlank.nav";
 		rotation = "0 0 0 0";
-		XDimOverSize = "0";
+		conjoinBowlDev = "20";
 		scale = "1 1 1";
 	};
 	new Sky(Sky) {
@@ -106,10 +106,10 @@ new SimGroup(MissionGroup) {
 		visibleDistance = "720";
 		useSkyTextures = "1";
 		renderBottomTexture = "0";
-		SkySolidColor = "0.390000 0.390000 0.390000 0.000000";
-		fogDistance = "500";
-		fogColor = "0.600000 0.600000 0.600000 1.000000";
-		fogVolume1 = "0 0 0";
+		SkySolidColor = "0.400000 0.400000 0.400000 0.000000";
+		fogDistance = "600";
+		fogColor = "0.600000 0.800000 0.600000 1.000000";
+		fogVolume1 = "600 0 150";
 		fogVolume2 = "0 0 0";
 		fogVolume3 = "0 0 0";
 		materialList = "sky_desert_blue.dml";
@@ -118,8 +118,8 @@ new SimGroup(MissionGroup) {
 		fogVolumeColor1 = "128.000000 128.000000 128.000000 0.000000";
 		fogVolumeColor2 = "128.000000 128.000000 128.000000 -198748244414614883000000000000000000000.000000";
 		fogVolumeColor3 = "128.000000 128.000000 128.000000 -222768174765569861000000000000000000000.000000";
-		high_visibleDistance = "-1";
-		high_fogDistance = "-1";
+		high_visibleDistance = "700";
+		high_fogDistance = "600";
 		high_fogVolume1 = "-1 5.80484e-38 0";
 		high_fogVolume2 = "-1 0 1.10328e-37";
 		high_fogVolume3 = "-1 1.09778e-37 1.10306e-37";
@@ -146,8 +146,8 @@ new SimGroup(MissionGroup) {
 		};
 		new SimGroup(Team0) {
 
-			team = "0";
 			powerCount = "1";
+			team = "0";
 
 			new InteriorInstance(InteriorInstance) {
 				position = "-159.264 -56.3309 158.884";
@@ -250,13 +250,13 @@ new SimGroup(MissionGroup) {
 				static = "1";
 				rotate = "1";
 
-				className = "FlagObj";
-				originalPosition = "-159.264 -56.4571 160.885 1 0 0 0";
 				Target = "33";
-				team = "0";
-				Trigger = "4693";
-				returnThread = "2226";
 				isHome = "1";
+				team = "0";
+				Trigger = "7901";
+				originalPosition = "-159.264 -56.4571 160.885 1 0 0 0";
+				returnThread = "2226";
+				className = "FlagObj";
 			};
 			new StaticShape() {
 				position = "-420.82 -274.964 137.044";
@@ -267,7 +267,7 @@ new SimGroup(MissionGroup) {
 				homingCount = "0";
 
 				Target = "34";
-				Trigger = "4604";
+				Trigger = "7810";
 				team = "0";
 			};
 			new StaticShape() {
@@ -279,7 +279,7 @@ new SimGroup(MissionGroup) {
 				homingCount = "0";
 
 				Target = "35";
-				Trigger = "4606";
+				Trigger = "7812";
 				team = "0";
 			};
 			new TSStatic() {
@@ -309,7 +309,7 @@ new SimGroup(MissionGroup) {
 				homingCount = "0";
 
 				Target = "36";
-				Trigger = "4610";
+				Trigger = "7816";
 				team = "0";
 			};
 			new WaterBlock() {
@@ -327,15 +327,15 @@ new SimGroup(MissionGroup) {
 				removeWetEdges = "1";
 				AudioEnvironment = "Underwater";
 
-				seedPoints = "0 0 1 0 1 1 0 1";
+				params3 = "1.21 -0.61 0.13 -0.33";
 				params2 = "0.39 0.39 0.2 0.133";
+				floodFill = "1";
+				team = "0";
+				seedPoints = "0 0 1 0 1 1 0 1";
 				params1 = "0.63 -2.41 0.33 0.21";
 				params0 = "0.32 -0.67 0.066 0.5";
-				team = "0";
-				params3 = "1.21 -0.61 0.13 -0.33";
-				textureSize = "32 32";
-				floodFill = "1";
 				extent = "100 100 10";
+				textureSize = "32 32";
 			};
 			new Item() {
 				position = "38.9603 72.8569 179.664";
@@ -550,8 +550,8 @@ new SimGroup(MissionGroup) {
 				lockCount = "0";
 				homingCount = "0";
 
-				Target = "39";
-				Trigger = "6437";
+				Target = "37";
+				Trigger = "7839";
 				team = "0";
 			};
 			new StaticShape() {
@@ -562,8 +562,8 @@ new SimGroup(MissionGroup) {
 				lockCount = "0";
 				homingCount = "0";
 
-				Target = "37";
-				Trigger = "4634";
+				Target = "38";
+				Trigger = "7841";
 				team = "0";
 			};
 			new InteriorInstance() {
@@ -583,7 +583,7 @@ new SimGroup(MissionGroup) {
 				lockCount = "0";
 				homingCount = "0";
 
-				Target = "38";
+				Target = "39";
 				team = "0";
 			};
 			new InteriorInstance() {
@@ -611,8 +611,8 @@ new SimGroup(MissionGroup) {
 		terrainFile = "Oasis.ter";
 		squareSize = "8";
 
-		visibleDistance = "1200";
 		position = "-1024 -1024 0";
+		visibleDistance = "1200";
 	};
 	new SimGroup(Signature) {
 

@@ -18,11 +18,11 @@
 //--- OBJECT WRITE BEGIN ---
 new SimGroup(MissionGroup) {
 
-	powerCount = "1";
 	CTF_timeLimit = "25";
 	musicTrack = "lush";
-	CTF_scoreLimit = "6";
+	powerCount = "1";
 	cdTrack = "2";
+	CTF_scoreLimit = "6";
 
 	new MissionArea(MissionArea) {
 		area = "-1456 -1440 864 1024";
@@ -34,8 +34,8 @@ new SimGroup(MissionGroup) {
 		rotation = "1 0 0 0";
 		scale = "1 1 1";
 		direction = "0.57735 0.57735 -0.57735";
-		color = "0.700000 0.700000 0.700000 1.000000";
-		ambient = "0.800000 0.800000 0.800000 1.000000";
+		color = "0.600000 0.600000 0.600000 1.000000";
+		ambient = "0.600000 0.600000 0.600000 1.000000";
 		texture[0] = "special/sunFlare";
 		texture[1] = "special/sunFlare02";
 		texture[2] = "special/LensFlare/flare01";
@@ -54,25 +54,25 @@ new SimGroup(MissionGroup) {
 		terrainFile = "Broadside_nef.ter";
 		squareSize = "8";
 
+		locked = "true";
 		position = "-1024 -1024 0";
 		hazeDistance = "250";
 		visibleDistance = "1200";
-		locked = "true";
 	};
 	new NavigationGraph(NavGraph) {
 		conjoinAngleDev = "45";
 		cullDensity = "0.3";
 		customArea = "0 0 0 0";
 
+		locked = "true";
 		XDimOverSize = "0";
 		position = "0 0 0 1";
 		GraphFile = "Abominable.nav";
-		conjoinBowlDev = "20";
-		rotation = "0 0 0 0";
 		coverage = "0";
-		scale = "1 1 1";
-		locked = "true";
 		YDimOverSize = "0";
+		rotation = "0 0 0 0";
+		conjoinBowlDev = "20";
+		scale = "1 1 1";
 	};
 	new Sky(Sky) {
 		position = "-1024 -1024 0";
@@ -84,13 +84,13 @@ new SimGroup(MissionGroup) {
 		cloudSpeed1 = "0.0001";
 		cloudSpeed2 = "0.0002";
 		cloudSpeed3 = "0.0003";
-		visibleDistance = "450";
+		visibleDistance = "650";
 		useSkyTextures = "1";
 		renderBottomTexture = "0";
-		SkySolidColor = "1.000000 1.000000 1.000000 1.000000";
-		fogDistance = "400";
-		fogColor = "0.200000 0.200000 0.200000 0.000000";
-		fogVolume1 = "300 0 150";
+		SkySolidColor = "0.400000 0.400000 0.400000 1.000000";
+		fogDistance = "300";
+		fogColor = "0.350000 0.350000 0.350000 0.000000";
+		fogVolume1 = "0 0 0";
 		fogVolume2 = "0 0 0";
 		fogVolume3 = "0 0 0";
 		materialList = "Euro4_Bleed.dml";
@@ -99,11 +99,11 @@ new SimGroup(MissionGroup) {
 		fogVolumeColor1 = "2.010000 2.010000 2.010000 10000.000000";
 		fogVolumeColor2 = "1.000000 1.000000 1.000000 0.742938";
 		fogVolumeColor3 = "0.000000 0.000000 0.000000 1.000000";
-		high_visibleDistance = "350";
-		high_fogDistance = "1";
-		high_fogVolume1 = "1 0 2.77029e-34";
-		high_fogVolume2 = "1 2.77038e-34 1";
-		high_fogVolume3 = "1 0 1.62236e-07";
+		high_visibleDistance = "650";
+		high_fogDistance = "100";
+		high_fogVolume1 = "0 0 0";
+		high_fogVolume2 = "0 0 0";
+		high_fogVolume3 = "0 0 0";
 
 		cloudSpeed0 = "0.900000 0.900000";
 	};
@@ -120,7 +120,7 @@ new SimGroup(MissionGroup) {
 			powerCount = "2";
 			providesPower = "1";
 
-			new Item(Team0Flag1) {
+			new Item(Team0flag1) {
 				position = "-1033.77 -871.596 60.4668";
 				rotation = "1 0 0 0";
 				scale = "1 1 1";
@@ -131,14 +131,14 @@ new SimGroup(MissionGroup) {
 				static = "0";
 				rotate = "1";
 
-				returnThread = "4387";
+				Target = "33";
+				isHome = "1";
 				team = "0";
 				WayPoint = "122539";
-				Trigger = "4656";
-				originalPosition = "-1033.77 -871.596 60.4477 1 0 0 0";
-				isHome = "1";
+				Trigger = "19669";
+				originalPosition = "-1033.77 -871.596 60.4668 1 0 0 0";
+				returnThread = "4387";
 				className = "FlagObj";
-				Target = "33";
 			};
 		};
 	};
@@ -241,12 +241,12 @@ new SimGroup(MissionGroup) {
 		lockCount = "0";
 		homingCount = "0";
 
-		inUse = "Down";
-		Trigger = "4635";
-		team = "0";
-		powerCount = "0";
-		notReady = "1";
 		Target = "34";
+		inUse = "Down";
+		powerCount = "0";
+		Trigger = "19648";
+		team = "0";
+		notReady = "1";
 	};
 	new StaticShape() {
 		position = "-1391.04 -762.219 91.5631";
@@ -256,12 +256,12 @@ new SimGroup(MissionGroup) {
 		lockCount = "0";
 		homingCount = "0";
 
-		inUse = "Down";
-		Trigger = "4637";
-		team = "0";
-		powerCount = "0";
-		notReady = "1";
 		Target = "35";
+		inUse = "Down";
+		powerCount = "0";
+		Trigger = "19650";
+		team = "0";
+		notReady = "1";
 	};
 	new StaticShape() {
 		position = "-1039.97 -555.564 20.2865";
@@ -271,9 +271,9 @@ new SimGroup(MissionGroup) {
 		lockCount = "0";
 		homingCount = "0";
 
-		team = "0";
-		powerCount = "0";
 		Target = "36";
+		powerCount = "0";
+		team = "0";
 	};
 	new Item() {
 		position = "-1296.54 -449.209 116.454";
@@ -303,10 +303,10 @@ new SimGroup(MissionGroup) {
 		lockCount = "0";
 		homingCount = "0";
 
-		Trigger = "4642";
-		team = "0";
-		powerCount = "0";
 		Target = "37";
+		powerCount = "0";
+		Trigger = "19655";
+		team = "0";
 	};
 	new InteriorInstance(InteriorInstance) {
 		position = "-1083.63 -1144.12 37.6288";
@@ -369,6 +369,22 @@ new SimGroup(MissionGroup) {
 		scale = "1 1 1";
 		interiorFile = "bbunkc.dif";
 		showTerrainInside = "0";
+	};
+	new FileObject() {
+	};
+	new FileObject() {
+	};
+	new FileObject() {
+	};
+	new FileObject() {
+	};
+	new FileObject() {
+	};
+	new FileObject() {
+	};
+	new FileObject() {
+	};
+	new FileObject() {
 	};
 	new FileObject() {
 	};
