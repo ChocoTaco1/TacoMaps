@@ -15,13 +15,13 @@
 //--- OBJECT WRITE BEGIN ---
 new SimGroup(MissionGroup) {
 
-	powerCount = "0";
-	musicTrack = "desert";
-	CTF_scoreLimit = "8";
 	cdTrack = "2";
+	musicTrack = "desert";
+	powerCount = "0";
+	CTF_scoreLimit = "8";
 
 	new MissionArea(MissionArea) {
-		area = "-528 -736 1024 1408";
+		area = "-472 -672 896 1312";
 		flightCeiling = "450";
 		flightCeilingRange = "30";
 
@@ -65,15 +65,15 @@ new SimGroup(MissionGroup) {
 		cullDensity = "0.3";
 		customArea = "0 0 0 0";
 
+		rotation = "0 0 0 0";
 		YDimOverSize = "0";
-		XDimOverSize = "0";
+		scale = "1 1 1";
+		conjoinBowlDev = "20";
 		locked = "true";
 		GraphFile = "BeachBlitz.nav";
-		position = "0 0 0 1";
-		conjoinBowlDev = "20";
-		rotation = "0 0 0 0";
 		coverage = "0";
-		scale = "1 1 1";
+		position = "0 0 0 1";
+		XDimOverSize = "0";
 	};
 	new WaterBlock() {
 		position = "-600 -1024 -52";
@@ -122,8 +122,8 @@ new SimGroup(MissionGroup) {
 		high_fogVolume2 = "-1 0 0";
 		high_fogVolume3 = "-1 0.000741039 2978.62";
 
-		locked = "true";
 		cloudSpeed0 = "0.000500 0.000500";
+		locked = "true";
 	};
 	new SimGroup(Teams) {
 
@@ -155,14 +155,14 @@ new SimGroup(MissionGroup) {
 						position = "108.439 -530.4 80.731";
 						rotation = "1 0 0 0";
 						scale = "1.5 1.5 1.5";
-						nameTag = "\x01836";
+						nameTag = "\x01852";
 						dataBlock = "SolarPanel";
 						lockCount = "0";
 						homingCount = "0";
 
+						Target = "33";
 						powerCount = "0";
 						team = "1";
-						Target = "34";
 					};
 					new InteriorInstance() {
 						position = "-73.7204 -285.799 199.241";
@@ -179,26 +179,26 @@ new SimGroup(MissionGroup) {
 						position = "-293.369 -515.587 134.001";
 						rotation = "-0 0 -1 9.74027";
 						scale = "1 1 1";
-						nameTag = "\x01837";
+						nameTag = "\x01853";
 						dataBlock = "GeneratorLarge";
 						lockCount = "0";
 						homingCount = "0";
 
+						Target = "34";
 						powerCount = "0";
 						team = "1";
-						Target = "35";
 					};
 					new StaticShape() {
 						position = "129.408 -530.2 60.931";
 						rotation = "1 0 0 0";
 						scale = "1.5 1.5 1.5";
-						nameTag = "\x01836";
+						nameTag = "\x01852";
 						dataBlock = "SolarPanel";
 						lockCount = "0";
 						homingCount = "0";
 
+						Target = "35";
 						team = "1";
-						Target = "36";
 					};
 					new InteriorInstance(InteriorInstance) {
 						position = "118.919 -529.661 146.845";
@@ -276,25 +276,25 @@ new SimGroup(MissionGroup) {
 						position = "263.268 485.307 123.636";
 						rotation = "0 0 1 161.574";
 						scale = "1 1 1";
-						nameTag = "\x01837";
+						nameTag = "\x01853";
 						dataBlock = "GeneratorLarge";
 						lockCount = "0";
 						homingCount = "0";
 
+						Target = "36";
 						team = "2";
-						Target = "37";
 					};
 					new StaticShape() {
 						position = "-146.21 530.272 61.57";
 						rotation = "0 0 1 185.248";
 						scale = "1.5 1.5 1.5";
-						nameTag = "\x01836";
+						nameTag = "\x01852";
 						dataBlock = "SolarPanel";
 						lockCount = "0";
 						homingCount = "0";
 
+						Target = "37";
 						team = "2";
-						Target = "38";
 					};
 					new InteriorInstance() {
 						position = "260.371 486.322 157.533";
@@ -391,8 +391,8 @@ new SimGroup(MissionGroup) {
 
 			powerCount = "0";
 
-			new Item(Team0Flag1) {
-				position = "52.2082 2.91586 192.779";
+			new Item(Team0flag1) {
+				position = "52.2082 2.91586 192.792";
 				rotation = "1 0 0 0";
 				scale = "1 1 1";
 				dataBlock = "flag";
@@ -402,15 +402,15 @@ new SimGroup(MissionGroup) {
 				static = "0";
 				rotate = "1";
 
+				bounced = "0";
+				originalPosition = "52.2082 2.91586 192.779 1 0 0 0";
 				className = "FlagObj";
+				Target = "38";
 				isHome = "1";
+				team = "0";
+				Trigger = "15079";
 				searchSchedule = "13914";
 				returnThread = "11053";
-				bounced = "0";
-				team = "0";
-				Trigger = "9408";
-				Target = "39";
-				originalPosition = "52.2082 2.91586 192.778 1 0 0 0";
 			};
 			new InteriorInstance(InteriorInstance) {
 				position = "-135.877 525.241 146.137";
@@ -418,6 +418,8 @@ new SimGroup(MissionGroup) {
 				scale = "3.7 4.5 1";
 				interiorFile = "bmisc4.dif";
 				showTerrainInside = "0";
+
+				team = "0";
 			};
 			new InteriorInstance(InteriorInstance) {
 				position = "118.901 -525.196 143.661";
@@ -425,6 +427,53 @@ new SimGroup(MissionGroup) {
 				scale = "3.7 4.5 1";
 				interiorFile = "bmisc4.dif";
 				showTerrainInside = "0";
+
+				team = "0";
+			};
+			new InteriorInstance(InteriorInstance) {
+				position = "388.225 548.682 47.137";
+				rotation = "0 0 1 0.573347";
+				scale = "10 24 10";
+				interiorFile = "bmisc4.dif";
+				showTerrainInside = "0";
+
+				team = "0";
+			};
+			new InteriorInstance(InteriorInstance) {
+				position = "-415.551 536.503 47.137";
+				rotation = "0 0 1 0.573347";
+				scale = "15 27 10";
+				interiorFile = "bmisc4.dif";
+				showTerrainInside = "0";
+
+				team = "0";
+			};
+			new InteriorInstance(InteriorInstance) {
+				position = "-438.179 -165.792 47.137";
+				rotation = "0 0 1 0.573347";
+				scale = "10 25 10";
+				interiorFile = "bmisc4.dif";
+				showTerrainInside = "0";
+
+				team = "0";
+			};
+			new InteriorInstance(InteriorInstance) {
+				position = "-375.664 -574.351 47.137";
+				rotation = "0 0 1 0.573347";
+				scale = "25 25 10";
+				interiorFile = "bmisc4.dif";
+				showTerrainInside = "0";
+
+				team = "0";
+			};
+			new InteriorInstance(InteriorInstance) {
+				position = "356.009 -647.815 47.137";
+				rotation = "0 0 1 0.573347";
+				scale = "18 7 10";
+				interiorFile = "bmisc4.dif";
+				showTerrainInside = "0";
+
+				team = "0";
 			};
 		};
 	};
@@ -447,7 +496,6 @@ new SimGroup(MissionGroup) {
 			dataBlock = "Observer";
 			lockCount = "0";
 			homingCount = "0";
-
 		};
 		new Camera() {
 			position = "-88.3171 -189.197 226.343";
@@ -456,7 +504,6 @@ new SimGroup(MissionGroup) {
 			dataBlock = "Observer";
 			lockCount = "0";
 			homingCount = "0";
-
 		};
 	};
 	new SimGroup(AmbientSfx) {
@@ -780,12 +827,10 @@ new SimGroup(MissionGroup) {
 			locked = "true";
 		};
 		new TSStatic() {
-			position = "-224.054 -481.82 167.005";
+			position = "-224.054 -481.82 166.605";
 			rotation = "1 0 0 0";
 			scale = "1 1 1";
 			shapeName = "borg19.dts";
-
-			locked = "true";
 		};
 		new TSStatic() {
 			position = "-296.016 224.931 170.601";
