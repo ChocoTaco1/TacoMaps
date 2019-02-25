@@ -15,11 +15,11 @@
 //--- OBJECT WRITE BEGIN ---
 new SimGroup(MissionGroup) {
 
-	CTF_timeLimit = "25";
-	musicTrack = "lush";
-	powerCount = "0";
 	cdTrack = "2";
+	CTF_timeLimit = "25";
+	powerCount = "0";
 	CTF_scoreLimit = "8";
+	musicTrack = "lush";
 
 	new MissionArea(MissionArea) {
 		area = "-960 -1152 992 736";
@@ -34,7 +34,7 @@ new SimGroup(MissionGroup) {
 		scale = "1 1 1";
 		direction = "0.57735 0.57735 -0.57735";
 		color = "0.600000 0.600000 0.600000 1.000000";
-		ambient = "0.350000 0.350000 0.350000 1.000000";
+		ambient = "0.450000 0.450000 0.450000 1.000000";
 		texture[0] = "special/sunFlare";
 		texture[1] = "special/sunFlare02";
 		texture[2] = "special/LensFlare/flare01";
@@ -55,20 +55,20 @@ new SimGroup(MissionGroup) {
 		terrainFile = "Scarabrae_nef.ter";
 		squareSize = "8";
 
+		visibleDistance = "1200";
 		locked = "true";
 		position = "-1024 -1024 0";
 		hazeDistance = "250";
-		visibleDistance = "1200";
 	};
 	new NavigationGraph(NavGraph) {
 		conjoinAngleDev = "45";
 		cullDensity = "0.3";
 		customArea = "0 0 0 0";
 
-		XDimOverSize = "0";
-		position = "0 0 0 1";
-		GraphFile = "MissionBlank.nav";
 		coverage = "0";
+		GraphFile = "MissionBlank.nav";
+		position = "0 0 0 1";
+		XDimOverSize = "0";
 		YDimOverSize = "0";
 		rotation = "0 0 0 0";
 		conjoinBowlDev = "20";
@@ -87,9 +87,9 @@ new SimGroup(MissionGroup) {
 		visibleDistance = "520";
 		useSkyTextures = "1";
 		renderBottomTexture = "0";
-		SkySolidColor = "0.390000 0.390000 0.390000 0.000000";
+		SkySolidColor = "0.550000 0.550000 0.550000 0.000000";
 		fogDistance = "320";
-		fogColor = "0.500000 0.500000 0.500000 1.000000";
+		fogColor = "0.550000 0.550000 0.550000 1.000000";
 		fogVolume1 = "0 0 0";
 		fogVolume2 = "0 0 0";
 		fogVolume3 = "0 0 0";
@@ -189,23 +189,23 @@ new SimGroup(MissionGroup) {
 				lockCount = "0";
 				homingCount = "0";
 
-				Target = "33";
-				inUse = "Down";
-				Trigger = "17500";
+				Trigger = "4725";
 				team = "0";
+				inUse = "Down";
+				Target = "33";
 				notReady = "1";
 			};
 			new StaticShape() {
 				position = "-4342.35 -798.112 -201.193";
 				rotation = "1 0 0 0";
 				scale = "1 1 1";
-				nameTag = "\x01726";
+				nameTag = "\x01723";
 				dataBlock = "GeneratorLarge";
 				lockCount = "0";
 				homingCount = "0";
 
-				Target = "34";
 				team = "0";
+				Target = "34";
 			};
 			new StaticShape() {
 				position = "47.2912 -845.321 194.032";
@@ -215,10 +215,10 @@ new SimGroup(MissionGroup) {
 				lockCount = "0";
 				homingCount = "0";
 
-				Target = "35";
-				inUse = "Down";
-				Trigger = "17503";
+				Trigger = "4728";
 				team = "0";
+				inUse = "Down";
+				Target = "35";
 			};
 			new StaticShape() {
 				position = "47.593 -830.571 182.221";
@@ -228,22 +228,22 @@ new SimGroup(MissionGroup) {
 				lockCount = "0";
 				homingCount = "0";
 
-				Target = "36";
-				inUse = "Down";
-				Trigger = "17505";
+				Trigger = "4730";
 				team = "0";
+				inUse = "Down";
+				Target = "36";
 			};
 			new StaticShape() {
 				position = "-4356.2 -812.979 -192.98";
 				rotation = "0 0 1 179.909";
 				scale = "1 1 1";
-				nameTag = "\x01726";
+				nameTag = "\x01723";
 				dataBlock = "GeneratorLarge";
 				lockCount = "0";
 				homingCount = "0";
 
-				Target = "37";
 				team = "0";
+				Target = "37";
 			};
 			new StaticShape() {
 				position = "-999.971 -695.303 154.66";
@@ -253,9 +253,9 @@ new SimGroup(MissionGroup) {
 				lockCount = "0";
 				homingCount = "0";
 
-				Target = "38";
-				Trigger = "17508";
+				Trigger = "4733";
 				team = "0";
+				Target = "38";
 			};
 			new StaticShape() {
 				position = "-1004.99 -708.849 142.746";
@@ -265,9 +265,9 @@ new SimGroup(MissionGroup) {
 				lockCount = "0";
 				homingCount = "0";
 
-				Target = "39";
-				Trigger = "17510";
+				Trigger = "4735";
 				team = "0";
+				Target = "39";
 			};
 			new StaticShape() {
 				position = "-755.002 -572.796 129.713";
@@ -277,9 +277,9 @@ new SimGroup(MissionGroup) {
 				lockCount = "0";
 				homingCount = "0";
 
-				Target = "40";
-				Trigger = "17512";
+				Trigger = "4737";
 				team = "0";
+				Target = "40";
 			};
 			new Item(Team0flag1) {
 				position = "-422.485 -743.201 129.979";
@@ -292,12 +292,12 @@ new SimGroup(MissionGroup) {
 				static = "1";
 				rotate = "1";
 
-				Target = "41";
-				isHome = "1";
-				team = "0";
-				Trigger = "17702";
 				originalPosition = "-422.485 -743.201 129.979 1 0 0 0";
 				className = "FlagObj";
+				isHome = "1";
+				team = "0";
+				Trigger = "4930";
+				Target = "41";
 			};
 			new InteriorInstance(InteriorInstance) {
 				position = "-393.074 -762.528 130.283";
@@ -306,8 +306,8 @@ new SimGroup(MissionGroup) {
 				interiorFile = "brock8.dif";
 				showTerrainInside = "0";
 
-				team = "0";
 				hidden = "false";
+				team = "0";
 			};
 			new InteriorInstance() {
 				position = "-440.294 -748.104 103.7";
@@ -320,8 +320,8 @@ new SimGroup(MissionGroup) {
 			};
 		};
 	};
-	new InteriorInstance() {
-		position = "-412.303 -773.007 124.82";
+	new InteriorInstance(InteriorInstance) {
+		position = "-412.2 -773.007 124.82";
 		rotation = "-0.0125171 0.0257545 0.99959 161.188";
 		scale = "0.5 0.5 0.5";
 		interiorFile = "t_bwall2a_lrg_CC.dif";
@@ -1001,8 +1001,8 @@ new SimGroup(MissionGroup) {
 		interiorFile = "brock8.dif";
 		showTerrainInside = "0";
 	};
-	new InteriorInstance() {
-		position = "-518.016 -1000.75 130";
+	new InteriorInstance(InteriorInstance) {
+		position = "-518.1 -1000.75 130";
 		rotation = "0 0 1 30";
 		scale = "0.5 0.5 0.5";
 		interiorFile = "t_bwall2a_lrg_CC.dif";
@@ -1022,15 +1022,15 @@ new SimGroup(MissionGroup) {
 		interiorFile = "t_bwall2a_lrg_CC.dif";
 		showTerrainInside = "0";
 	};
-	new InteriorInstance() {
-		position = "-496.831 -964.026 127";
+	new InteriorInstance(InteriorInstance) {
+		position = "-496.9 -964.026 127";
 		rotation = "0 0 1 30";
 		scale = "0.5 0.5 0.5";
 		interiorFile = "t_bwall2a_lrg_CC.dif";
 		showTerrainInside = "0";
 	};
-	new InteriorInstance() {
-		position = "-504.329 -977.099 128";
+	new InteriorInstance(InteriorInstance) {
+		position = "-504.45 -977.099 128";
 		rotation = "0 0 1 30";
 		scale = "0.5 0.5 0.5";
 		interiorFile = "t_bwall2a_lrg_CC.dif";
@@ -1043,8 +1043,8 @@ new SimGroup(MissionGroup) {
 		interiorFile = "t_bwall2a_cnr_CC.dif";
 		showTerrainInside = "0";
 	};
-	new InteriorInstance() {
-		position = "-309.136 -484.492 159";
+	new InteriorInstance(InteriorInstance) {
+		position = "-309.21 -484.492 159";
 		rotation = "0 0 1 30";
 		scale = "0.5 0.5 0.5";
 		interiorFile = "t_bwall2a_lrg_CC.dif";
@@ -1280,15 +1280,15 @@ new SimGroup(MissionGroup) {
 		interiorFile = "t_bwall2a_cnr_CC.dif";
 		showTerrainInside = "0";
 	};
-	new InteriorInstance() {
-		position = "-421.132 -747.076 125.337";
+	new InteriorInstance(InteriorInstance) {
+		position = "-421.08 -747.076 125.337";
 		rotation = "-0.0125171 0.0257545 0.99959 161.188";
 		scale = "0.5 0.5 0.5";
 		interiorFile = "t_bwall2a_lrg_CC.dif";
 		showTerrainInside = "0";
 	};
 	new InteriorInstance(InteriorInstance) {
-		position = "-411.093 -739.456 126.315";
+		position = "-411.011 -739.485 126.318";
 		rotation = "0.0158546 0.0458387 0.998823 71.2448";
 		scale = "0.5 0.5 0.5";
 		interiorFile = "t_bwall2a_lrg_CC.dif";
@@ -1407,7 +1407,7 @@ new SimGroup(MissionGroup) {
 		shapeName = "borg19.dts";
 	};
 	new TSStatic() {
-		position = "-24.0804 -542.142 218.89";
+		position = "-24.0804 -542.142 218.29";
 		rotation = "1 0 0 0";
 		scale = "1 1 1";
 		shapeName = "borg5.dts";
@@ -1425,8 +1425,8 @@ new SimGroup(MissionGroup) {
 		shapeName = "borg5.dts";
 	};
 	new TSStatic() {
-		position = "-54.2524 -1136.38 131.228";
-		rotation = "1 0 0 0";
+		position = "-54.3834 -1136.48 130.843";
+		rotation = "0.35311 -0.890519 0.28686 5.00091";
 		scale = "1 1 1";
 		shapeName = "borg5.dts";
 	};
@@ -1443,13 +1443,13 @@ new SimGroup(MissionGroup) {
 		shapeName = "borg5.dts";
 	};
 	new TSStatic() {
-		position = "-221.755 -558.748 136.086";
-		rotation = "1 0 0 0";
+		position = "-221.505 -558.378 136.203";
+		rotation = "-0.840071 0.509588 0.186014 29.812";
 		scale = "1 1 1";
 		shapeName = "borg5.dts";
 	};
 	new TSStatic() {
-		position = "-438.399 -658.176 124.164";
+		position = "-438.399 -658.176 123.964";
 		rotation = "1 0 0 0";
 		scale = "1 1 1";
 		shapeName = "borg5.dts";
@@ -1467,19 +1467,19 @@ new SimGroup(MissionGroup) {
 		shapeName = "borg5.dts";
 	};
 	new TSStatic() {
-		position = "-1158.64 -979.824 148.106";
-		rotation = "1 0 0 0";
+		position = "-1158.64 -980.334 147.175";
+		rotation = "1 0 0 15.4699";
 		scale = "1 1 1";
 		shapeName = "borg5.dts";
 	};
 	new TSStatic() {
-		position = "-1129.58 -771.493 180.737";
-		rotation = "1 0 0 0";
+		position = "-1129.91 -771.271 180.399";
+		rotation = "-0.544621 -0.835655 0.0712022 17.7836";
 		scale = "1 1 1";
 		shapeName = "borg5.dts";
 	};
 	new TSStatic() {
-		position = "-1069.38 -490.949 125.198";
+		position = "-1069.38 -490.949 125.398";
 		rotation = "1 0 0 0";
 		scale = "1 1 1";
 		shapeName = "borg5.dts";
@@ -1491,8 +1491,8 @@ new SimGroup(MissionGroup) {
 		shapeName = "borg5.dts";
 	};
 	new TSStatic() {
-		position = "-795.775 -562.2 121.354";
-		rotation = "1 0 0 0";
+		position = "-795.622 -562.2 121.177";
+		rotation = "0 1 0 17.1888";
 		scale = "1 1 1";
 		shapeName = "borg1.dts";
 	};
@@ -1503,7 +1503,7 @@ new SimGroup(MissionGroup) {
 		shapeName = "borg1.dts";
 	};
 	new TSStatic() {
-		position = "-771.192 -791.653 118.262";
+		position = "-771.192 -791.653 118.462";
 		rotation = "1 0 0 0";
 		scale = "1 1 1";
 		shapeName = "borg1.dts";
@@ -1546,11 +1546,27 @@ new SimGroup(MissionGroup) {
 		showTerrainInside = "0";
 	};
 	new InteriorInstance(InteriorInstance) {
-		position = "-407.381 -787.286 124.638";
+		position = "-407.32 -787.286 124.638";
 		rotation = "-0.0125171 0.0257545 0.99959 161.188";
 		scale = "0.5 0.5 0.5";
 		interiorFile = "t_bwall2a_lrg_CC.dif";
 		showTerrainInside = "0";
+	};
+	new FileObject() {
+	};
+	new FileObject() {
+	};
+	new FileObject() {
+	};
+	new FileObject() {
+	};
+	new FileObject() {
+	};
+	new FileObject() {
+	};
+	new FileObject() {
+	};
+	new FileObject() {
 	};
 	new FileObject() {
 	};
