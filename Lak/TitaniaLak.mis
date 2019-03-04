@@ -19,12 +19,12 @@
 new SimGroup(MissionGroup) {
 
 	musicTrack = "lush";
-	cdTrack = "2";
 	powerCount = "0";
 	CTF_scoreLimit = "6";
+	cdTrack = "2";
 
 	new MissionArea(MissionArea) {
-		area = "126 -182 1568 1092";
+		area = "126 -14 1008 784";
 		flightCeiling = "2000";
 		flightCeilingRange = "20";
 
@@ -91,23 +91,23 @@ new SimGroup(MissionGroup) {
 		squareSize = "14";
 		emptySquares = "170105 170130 170361 170386 170617 170642 170873 170898";
 
-		locked = "true";
 		position = "-1024 -1024 0";
+		locked = "true";
 	};
 	new NavigationGraph(NavGraph) {
 		conjoinAngleDev = "70";
 		cullDensity = "0.1";
 		customArea = "0 0 0 0";
 
+		position = "0 0 0 1";
+		coverage = "0";
 		YDimOverSize = "0";
 		rotation = "0 0 0 0";
+		GraphFile = "Titan.nav";
 		conjoinBowlDev = "20";
 		scale = "1 1 1";
 		XDimOverSize = "0";
 		locked = "true";
-		coverage = "0";
-		GraphFile = "Titan.nav";
-		position = "0 0 0 1";
 	};
 	new SimGroup(ObserverDropPoints) {
 
@@ -122,24 +122,16 @@ new SimGroup(MissionGroup) {
 			homingCount = "0";
 		};
 		new Camera(1) {
-			position = "455.82 346.097 103.976";
-			rotation = "0.451845 0.222867 -0.863809 59.4529";
+			position = "139.006 362.169 33.9618";
+			rotation = "0.337466 -0.344172 0.876163 98.6687";
 			scale = "1 1 1";
 			dataBlock = "Observer";
 			lockCount = "0";
 			homingCount = "0";
 		};
 		new Camera(2) {
-			position = "1179.55 -55.3271 181.365";
-			rotation = "0.18509 0.0505857 -0.981419 31.1228";
-			scale = "1 1 1";
-			dataBlock = "Observer";
-			lockCount = "0";
-			homingCount = "0";
-		};
-		new Camera(2) {
-			position = "1592.56 423.23 178.044";
-			rotation = "0.375541 0.047588 -0.925583 15.5914";
+			position = "757.651 78.0767 147.313";
+			rotation = "0.18509 0.0505859 -0.981419 31.1228";
 			scale = "1 1 1";
 			dataBlock = "Observer";
 			lockCount = "0";
@@ -210,8 +202,8 @@ new SimGroup(MissionGroup) {
 		};
 		new SimGroup(Team0) {
 
-			providesPower = "1";
 			powerCount = "1";
+			providesPower = "1";
 
 			new InteriorInstance() {
 				position = "759.449 353.847 109.6";
@@ -386,12 +378,12 @@ new SimGroup(MissionGroup) {
 				static = "1";
 				rotate = "1";
 
+				team = "0";
+				Trigger = "4995";
 				Target = "33";
 				originalPosition = "710.621 377.854 113.739 1 0 0 0";
 				className = "FlagObj";
 				isHome = "1";
-				team = "0";
-				Trigger = "8214";
 			};
 			new InteriorInstance() {
 				position = "1362.52 513.263 102.903";
