@@ -14,14 +14,14 @@
 //--- OBJECT WRITE BEGIN ---
 new SimGroup(MissionGroup) {
 
-	CTF_scoreLimit = "6";
 	CTF_timeLimit = "25";
-	cdTrack = "2";
 	powerCount = "0";
+	cdTrack = "2";
 	musicTrack = "lush";
+	CTF_scoreLimit = "6";
 
 	new MissionArea(MissionArea) {
-		area = "-560 -656 1072 1344";
+		area = "-288 -296 528 624";
 		flightCeiling = "2000";
 		flightCeilingRange = "50";
 
@@ -54,25 +54,25 @@ new SimGroup(MissionGroup) {
 		terrainFile = "TreasureIsland.ter";
 		squareSize = "8";
 
-		locked = "true";
-		position = "-1024 -1024 0";
 		hazeDistance = "50";
 		visibleDistance = "450";
+		locked = "true";
+		position = "-1024 -1024 0";
 	};
 	new NavigationGraph(NavGraph) {
 		conjoinAngleDev = "45";
 		cullDensity = "0.3";
 		customArea = "0 0 0 0";
 
-		locked = "true";
-		YDimOverSize = "0";
-		position = "0 0 0 1";
-		GraphFile = "TreasureIsland.nav";
-		coverage = "0";
 		rotation = "0 0 0 0";
-		conjoinBowlDev = "20";
+		coverage = "0";
 		scale = "1 1 1";
 		XDimOverSize = "0";
+		YDimOverSize = "0";
+		locked = "true";
+		GraphFile = "TreasureIsland.nav";
+		position = "0 0 0 1";
+		conjoinBowlDev = "20";
 	};
 	new SimGroup(Ambiance) {
 
@@ -621,9 +621,9 @@ new SimGroup(MissionGroup) {
 		visibleDistance = "600";
 		useSkyTextures = "1";
 		renderBottomTexture = "0";
-		SkySolidColor = "0.390000 0.390000 0.390000 0.000000";
+		SkySolidColor = "0.550000 0.550000 0.650000 1.000000";
 		fogDistance = "350";
-		fogColor = "0.700000 0.700000 0.800000 1.000000";
+		fogColor = "0.650000 0.650000 0.750000 1.000000";
 		fogVolume1 = "1540 0 350";
 		fogVolume2 = "0 0 0";
 		fogVolume3 = "0 0 0";
@@ -656,14 +656,14 @@ new SimGroup(MissionGroup) {
 		envMapIntensity = "0.4";
 		removeWetEdges = "0";
 
-		params3 = "1.21 -0.61 0.13 -0.33";
+		params2 = "0.39 0.39 0.2 0.133";
 		params1 = "0.63 -2.41 0.33 0.21";
+		textureSize = "32 32";
 		floodFill = "1";
+		extent = "100 100 10";
 		params0 = "0.32 -0.67 0.066 0.5";
 		seedPoints = "0 0 1 0 1 1 0 1";
-		params2 = "0.39 0.39 0.2 0.133";
-		extent = "100 100 10";
-		textureSize = "32 32";
+		params3 = "1.21 -0.61 0.13 -0.33";
 	};
 	new SimGroup(Teams) {
 
@@ -673,7 +673,7 @@ new SimGroup(MissionGroup) {
 
 			powerCount = "0";
 
-			new Item(Team0Flag1) {
+			new Item(Team0flag1) {
 				position = "-18.7026 7.13231 94.4745";
 				rotation = "1 0 0 0";
 				scale = "1 1 1";
@@ -684,12 +684,12 @@ new SimGroup(MissionGroup) {
 				static = "1";
 				rotate = "1";
 
-				Target = "33";
-				team = "0";
-				Trigger = "11034";
 				isHome = "1";
 				className = "FlagObj";
-				originalPosition = "-24.1356 3.93848 91.0745 1 0 0 0";
+				Target = "33";
+				originalPosition = "-18.7026 7.13231 94.4745 1 0 0 0";
+				team = "0";
+				Trigger = "8921";
 			};
 		};
 	};
@@ -698,8 +698,8 @@ new SimGroup(MissionGroup) {
 		powerCount = "0";
 
 		new Camera() {
-			position = "-67.4071 611.556 224.07";
-			rotation = "-0.0389881 -0.0848332 0.995632 229.176";
+			position = "-12.9651 185.74 167.965";
+			rotation = "-0.0662613 -0.144175 0.987331 228.814";
 			scale = "1 1 1";
 			dataBlock = "Observer";
 			lockCount = "0";
@@ -709,24 +709,24 @@ new SimGroup(MissionGroup) {
 			team = "0";
 		};
 		new Camera() {
-			position = "2.3521 -596.994 227.54";
-			rotation = "0.331026 -0.103218 0.937959 36.7773";
+			position = "-17.072 -27.1693 125.117";
+			rotation = "0.981535 0.0796123 -0.173928 50.0034";
+			scale = "1 1 1";
+			dataBlock = "Observer";
+			lockCount = "0";
+			homingCount = "0";
+
+			team = "0";
+		};
+		new Camera() {
+			position = "-163.389 -117.371 152.456";
+			rotation = "0.949256 -0.0340762 0.312653 13.0996";
 			scale = "1 1 1";
 			dataBlock = "Observer";
 			lockCount = "0";
 			homingCount = "0";
 
 			locked = "false";
-			team = "0";
-		};
-		new Camera() {
-			position = "-1.95488 -85.4744 194.923";
-			rotation = "0.956154 0.121938 -0.266273 51.1835";
-			scale = "1 1 1";
-			dataBlock = "Observer";
-			lockCount = "0";
-			homingCount = "0";
-
 			team = "0";
 		};
 	};
@@ -743,7 +743,7 @@ new SimGroup(MissionGroup) {
 			locked = "false";
 		};
 		new TSStatic() {
-			position = "-172.166 182.577 147.176";
+			position = "-172.166 182.577 146.976";
 			rotation = "1 0 0 0";
 			scale = "1 1 1";
 			shapeName = "borg16.dts";

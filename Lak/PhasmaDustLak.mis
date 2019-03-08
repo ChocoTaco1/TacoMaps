@@ -14,14 +14,14 @@
 //--- OBJECT WRITE BEGIN ---
 new SimGroup(MissionGroup) {
 
-	cdTrack = "2";
 	powerCount = "0";
-	CTF_scoreLimit = "4";
-	musicTrack = "lush";
 	CTF_timeLimit = "25";
+	CTF_scoreLimit = "4";
+	cdTrack = "2";
+	musicTrack = "lush";
 
 	new MissionArea(MissionArea) {
-		area = "-648 -640 1280 1264";
+		area = "-384 -392 768 768";
 		flightCeiling = "2000";
 		flightCeilingRange = "20";
 
@@ -54,9 +54,9 @@ new SimGroup(MissionGroup) {
 		terrainFile = "PhasmaDust.ter";
 		squareSize = "8";
 
-		hazeDistance = "250";
 		visibleDistance = "1200";
 		locked = "true";
+		hazeDistance = "250";
 		position = "-1024 -1024 0";
 	};
 	new NavigationGraph(NavGraph) {
@@ -65,14 +65,14 @@ new SimGroup(MissionGroup) {
 		customArea = "0 0 0 0";
 
 		rotation = "0 0 0 0";
-		GraphFile = "PhasmaDust.nav";
-		XDimOverSize = "0";
 		YDimOverSize = "0";
 		scale = "1 1 1";
-		coverage = "0";
-		locked = "true";
-		position = "0 0 0 1";
 		conjoinBowlDev = "20";
+		coverage = "0";
+		GraphFile = "PhasmaDust.nav";
+		locked = "true";
+		XDimOverSize = "0";
+		position = "0 0 0 1";
 	};
 	new SimGroup(Ambiance) {
 
@@ -230,7 +230,7 @@ new SimGroup(MissionGroup) {
 		visibleDistance = "850";
 		useSkyTextures = "1";
 		renderBottomTexture = "0";
-		SkySolidColor = "0.390000 0.390000 0.390000 0.000000";
+		SkySolidColor = "0.700000 0.550000 0.350000 1.000000";
 		fogDistance = "600";
 		fogColor = "0.700000 0.550000 0.450000 1.000000";
 		fogVolume1 = "50 0 100";
@@ -248,8 +248,8 @@ new SimGroup(MissionGroup) {
 		high_fogVolume2 = "-1 0 0";
 		high_fogVolume3 = "-1 0 0";
 
-		locked = "true";
 		cloudSpeed0 = "0.000000 0.000000";
+		locked = "true";
 	};
 	new WaterBlock() {
 		position = "-1024 -1024 50.5442";
@@ -265,14 +265,14 @@ new SimGroup(MissionGroup) {
 		envMapIntensity = "0.8";
 		removeWetEdges = "0";
 
-		seedPoints = "0 0 1 0 1 1 0 1";
-		params3 = "1.21 -0.61 0.13 -0.33";
+		floodFill = "1";
+		params0 = "0.32 -0.67 0.066 0.5";
 		params2 = "0.39 0.39 0.2 0.133";
+		seedPoints = "0 0 1 0 1 1 0 1";
+		extent = "100 100 10";
 		params1 = "0.63 -2.41 0.33 0.21";
 		textureSize = "32 32";
-		floodFill = "1";
-		extent = "100 100 10";
-		params0 = "0.32 -0.67 0.066 0.5";
+		params3 = "1.21 -0.61 0.13 -0.33";
 	};
 	new SimGroup(Teams) {
 
@@ -282,8 +282,8 @@ new SimGroup(MissionGroup) {
 
 			powerCount = "0";
 
-			new Item(Team0Flag1) {
-				position = "-4.59602 -3.57884 125.554";
+			new Item(Team0flag1) {
+				position = "-4.19602 -3.57884 124.754";
 				rotation = "1 0 0 0";
 				scale = "1 1 1";
 				dataBlock = "flag";
@@ -294,11 +294,11 @@ new SimGroup(MissionGroup) {
 				rotate = "1";
 
 				team = "0";
-				Trigger = "5130";
-				isHome = "1";
-				className = "FlagObj";
+				Trigger = "8891";
+				originalPosition = "-4.19602 -3.57884 124.754 1 0 0 0";
 				Target = "33";
-				originalPosition = "-4.59602 -3.57884 126.554 1 0 0 0";
+				className = "FlagObj";
+				isHome = "1";
 			};
 		};
 	};
@@ -307,8 +307,8 @@ new SimGroup(MissionGroup) {
 		powerCount = "0";
 
 		new Camera() {
-			position = "-553.88 -562.374 304.55";
-			rotation = "0.28287 -0.114393 0.952312 46.0172";
+			position = "-203.635 -204.18 147.226";
+			rotation = "0.174165 -0.068414 0.982337 43.5905";
 			scale = "1 1 1";
 			dataBlock = "Observer";
 			lockCount = "0";
@@ -327,13 +327,12 @@ new SimGroup(MissionGroup) {
 			team = "0";
 		};
 		new Camera() {
-			position = "550.467 555.201 293.104";
-			rotation = "-0.0517196 -0.123588 0.990985 225.049";
+			position = "-82.5481 334.159 133.461";
+			rotation = "0.000434474 -0.0854645 0.996341 179.42";
 			scale = "1 1 1";
 			dataBlock = "Observer";
 			lockCount = "0";
 			homingCount = "0";
-
 		};
 	};
 	new SimGroup(Statics) {
@@ -352,7 +351,7 @@ new SimGroup(MissionGroup) {
 			};
 			new TSStatic() {
 				position = "108 -4 131.147";
-				rotation = "0.0527802 -0.200424 0.978286 98.2477";
+				rotation = "0.0527802 -0.200424 0.978287 98.2476";
 				scale = "1.1 1.1 1.1";
 				shapeName = "borg1.dts";
 			};
@@ -495,7 +494,7 @@ new SimGroup(MissionGroup) {
 				shapeName = "borg1.dts";
 			};
 			new TSStatic() {
-				position = "60 36 122.334";
+				position = "60.1456 36.037 121.963";
 				rotation = "-0.269049 0.347255 0.898347 51.6553";
 				scale = "0.6 0.6 0.6";
 				shapeName = "borg1.dts";
@@ -764,7 +763,7 @@ new SimGroup(MissionGroup) {
 				shapeName = "borg5.dts";
 			};
 			new TSStatic() {
-				position = "-196 -380 169.063";
+				position = "-196.151 -380.065 168.486";
 				rotation = "0.128092 0.0528472 0.990353 178.02";
 				scale = "1.3 1.3 1.3";
 				shapeName = "borg5.dts";
@@ -1009,19 +1008,19 @@ new SimGroup(MissionGroup) {
 				shapeName = "borg16.dts";
 			};
 			new TSStatic() {
-				position = "0.284952 -208.037 115.966";
+				position = "0.284952 -208.037 119.566";
 				rotation = "0 0 -1 16.0002";
 				scale = "0.8 0.8 0.8";
 				shapeName = "borg16.dts";
 			};
 			new TSStatic() {
-				position = "32.285 -432.037 118.581";
+				position = "32.285 -432.037 126.381";
 				rotation = "1 0 0 0";
 				scale = "1.2 1.2 1.2";
 				shapeName = "borg16.dts";
 			};
 			new TSStatic() {
-				position = "-295.699 -128.023 160.932";
+				position = "-295.699 -128.023 170.132";
 				rotation = "0 0 1 197";
 				scale = "0.9 0.9 0.9";
 				shapeName = "borg16.dts";
@@ -1039,13 +1038,13 @@ new SimGroup(MissionGroup) {
 				shapeName = "borg16.dts";
 			};
 			new TSStatic() {
-				position = "144.285 -88.0373 118.112";
+				position = "144.285 -88.0373 126.912";
 				rotation = "0 0 1 216";
 				scale = "1.5 1.5 1.5";
 				shapeName = "borg16.dts";
 			};
 			new TSStatic() {
-				position = "578.064 15.5351 124.993";
+				position = "578.064 15.5351 127.193";
 				rotation = "0 0 -1 68.0003";
 				scale = "1.4 1.4 1.4";
 				shapeName = "borg16.dts";
@@ -1057,13 +1056,13 @@ new SimGroup(MissionGroup) {
 				shapeName = "borg16.dts";
 			};
 			new TSStatic() {
-				position = "504.285 199.963 127.98";
+				position = "504.285 199.963 135.18";
 				rotation = "0 0 1 171";
 				scale = "1.4 1.4 1.4";
 				shapeName = "borg16.dts";
 			};
 			new TSStatic() {
-				position = "-455.715 -88.0373 115.331";
+				position = "-455.715 -88.0373 125.131";
 				rotation = "0 0 1 66.0002";
 				scale = "1 1 1";
 				shapeName = "borg16.dts";
@@ -1075,13 +1074,13 @@ new SimGroup(MissionGroup) {
 				shapeName = "borg16.dts";
 			};
 			new TSStatic() {
-				position = "264.285 -240.037 114.862";
+				position = "264.285 -240.037 124.862";
 				rotation = "0 0 1 100";
 				scale = "1.2 1.2 1.2";
 				shapeName = "borg16.dts";
 			};
 			new TSStatic() {
-				position = "-125.723 131.281 122.986";
+				position = "-125.723 131.281 125.786";
 				rotation = "0 0 1 238";
 				scale = "0.9 0.9 0.9";
 				shapeName = "borg16.dts";
@@ -1093,7 +1092,7 @@ new SimGroup(MissionGroup) {
 				shapeName = "borg16.dts";
 			};
 			new TSStatic() {
-				position = "384.285 247.963 115.05";
+				position = "384.266 247.914 124.85";
 				rotation = "0 0 -1 29";
 				scale = "1.5 1.5 1.5";
 				shapeName = "borg16.dts";
@@ -1111,7 +1110,7 @@ new SimGroup(MissionGroup) {
 				shapeName = "borg16.dts";
 			};
 			new TSStatic() {
-				position = "-211.148 25.4193 116.57";
+				position = "-211.148 25.4193 122.57";
 				rotation = "0 0 1 88";
 				scale = "0.8 0.8 0.8";
 				shapeName = "borg16.dts";
@@ -1129,7 +1128,7 @@ new SimGroup(MissionGroup) {
 				shapeName = "borg16.dts";
 			};
 			new TSStatic() {
-				position = "8.28496 223.963 108.019";
+				position = "8.28496 223.963 114.219";
 				rotation = "0 0 -1 73.0006";
 				scale = "1.4 1.4 1.4";
 				shapeName = "borg16.dts";
@@ -1141,17 +1140,17 @@ new SimGroup(MissionGroup) {
 				shapeName = "borg16.dts";
 			};
 			new TSStatic() {
-				position = "-295.715 247.963 115.659";
+				position = "-295.715 247.963 123.259";
 				rotation = "1 0 0 0";
 				scale = "0.9 0.9 0.9";
 				shapeName = "borg16.dts";
 			};
 		};
 	};
-	new InteriorInstance() {
-		position = "2.58841 6.8823 53.5022";
-		rotation = "-0.338196 0.941075 -0.00142163 180.453";
-		scale = "1 1 1";
+	new InteriorInstance(InteriorInstance) {
+		position = "-13.8116 -0.3177 133.902";
+		rotation = "1 0 0 0";
+		scale = "0.8 0.8 0.8";
 		interiorFile = "bmisc_-nef_flagstand1_x.dif";
 		showTerrainInside = "0";
 	};

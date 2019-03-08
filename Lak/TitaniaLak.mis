@@ -18,13 +18,13 @@
 //--- OBJECT WRITE BEGIN ---
 new SimGroup(MissionGroup) {
 
-	musicTrack = "lush";
 	powerCount = "0";
 	CTF_scoreLimit = "6";
 	cdTrack = "2";
+	musicTrack = "lush";
 
 	new MissionArea(MissionArea) {
-		area = "126 -14 1008 784";
+		area = "168 56 784 672";
 		flightCeiling = "2000";
 		flightCeilingRange = "20";
 
@@ -43,7 +43,7 @@ new SimGroup(MissionGroup) {
 		visibleDistance = "950";
 		useSkyTextures = "1";
 		renderBottomTexture = "0";
-		SkySolidColor = "0.590000 0.390000 0.190000 0.000000";
+		SkySolidColor = "0.700000 0.550000 0.350000 0.000000";
 		fogDistance = "600";
 		fogColor = "0.800000 0.800000 0.700000 0.000000";
 		fogVolume1 = "0 0 0";
@@ -91,23 +91,23 @@ new SimGroup(MissionGroup) {
 		squareSize = "14";
 		emptySquares = "170105 170130 170361 170386 170617 170642 170873 170898";
 
-		position = "-1024 -1024 0";
 		locked = "true";
+		position = "-1024 -1024 0";
 	};
 	new NavigationGraph(NavGraph) {
 		conjoinAngleDev = "70";
 		cullDensity = "0.1";
 		customArea = "0 0 0 0";
 
-		position = "0 0 0 1";
-		coverage = "0";
-		YDimOverSize = "0";
 		rotation = "0 0 0 0";
-		GraphFile = "Titan.nav";
-		conjoinBowlDev = "20";
+		YDimOverSize = "0";
 		scale = "1 1 1";
-		XDimOverSize = "0";
+		conjoinBowlDev = "20";
+		coverage = "0";
+		GraphFile = "Titan.nav";
 		locked = "true";
+		XDimOverSize = "0";
+		position = "0 0 0 1";
 	};
 	new SimGroup(ObserverDropPoints) {
 
@@ -122,8 +122,8 @@ new SimGroup(MissionGroup) {
 			homingCount = "0";
 		};
 		new Camera(1) {
-			position = "139.006 362.169 33.9618";
-			rotation = "0.337466 -0.344172 0.876163 98.6687";
+			position = "183.665 362.765 37.7366";
+			rotation = "0.3572 -0.35919 0.862201 98.77";
 			scale = "1 1 1";
 			dataBlock = "Observer";
 			lockCount = "0";
@@ -323,7 +323,7 @@ new SimGroup(MissionGroup) {
 				team = "0";
 			};
 			new InteriorInstance() {
-				position = "133.992 382.466 30.6744";
+				position = "177.592 382.466 30.6744";
 				rotation = "-0.486767 0.668327 0.562491 152.165";
 				scale = "1 1 1";
 				interiorFile = "brock8.dif";
@@ -332,7 +332,7 @@ new SimGroup(MissionGroup) {
 				team = "0";
 			};
 			new InteriorInstance(InteriorInstance) {
-				position = "112.977 361.001 26.9154";
+				position = "156.577 361.001 26.9154";
 				rotation = "0.682176 0.0115497 0.731097 178.765";
 				scale = "1.2 1.2 1";
 				interiorFile = "brockc.dif";
@@ -341,7 +341,7 @@ new SimGroup(MissionGroup) {
 				team = "0";
 			};
 			new InteriorInstance() {
-				position = "143.872 372.597 13.0227";
+				position = "187.472 372.597 13.0227";
 				rotation = "0 1 0 151.834";
 				scale = "1 1 1";
 				interiorFile = "brock8.dif";
@@ -350,7 +350,7 @@ new SimGroup(MissionGroup) {
 				team = "0";
 			};
 			new InteriorInstance() {
-				position = "130.852 351.179 17.643";
+				position = "174.452 351.179 17.643";
 				rotation = "-0.163351 -0.983482 -0.0779772 40.7461";
 				scale = "1 1 1";
 				interiorFile = "brock8.dif";
@@ -359,7 +359,7 @@ new SimGroup(MissionGroup) {
 				team = "0";
 			};
 			new InteriorInstance() {
-				position = "132.981 340.728 20.8777";
+				position = "176.581 340.728 20.8777";
 				rotation = "0.48794 0.329645 0.808238 229.954";
 				scale = "1 1 1";
 				interiorFile = "brock8.dif";
@@ -379,9 +379,9 @@ new SimGroup(MissionGroup) {
 				rotate = "1";
 
 				team = "0";
-				Trigger = "4995";
-				Target = "33";
+				Trigger = "6469";
 				originalPosition = "710.621 377.854 113.739 1 0 0 0";
+				Target = "33";
 				className = "FlagObj";
 				isHome = "1";
 			};
@@ -518,7 +518,7 @@ new SimGroup(MissionGroup) {
 			Target = "-1";
 		};
 		new Item() {
-			position = "146.881 362.821 12.6237";
+			position = "185.481 362.821 12.6237";
 			rotation = "1 0 0 0";
 			scale = "1 1 1";
 			dataBlock = "RepairPatch";
@@ -1711,7 +1711,7 @@ new SimGroup(MissionGroup) {
 		showTerrainInside = "0";
 	};
 	new Item() {
-		position = "190.036 362.865 12.8988";
+		position = "211.436 362.865 12.8988";
 		rotation = "1 0 0 0";
 		scale = "1 1 1";
 		dataBlock = "RepairKit";
