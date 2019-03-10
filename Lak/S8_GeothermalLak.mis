@@ -18,13 +18,13 @@
 new SimGroup(MissionGroup) {
 
 	powerCount = "0";
-	musicTrack = "lush";
-	CTF_timeLimit = "25";
-	CTF_scoreLimit = "8";
 	cdTrack = "2";
+	musicTrack = "lush";
+	CTF_scoreLimit = "8";
+	CTF_timeLimit = "25";
 
 	new MissionArea(MissionArea) {
-		area = "-800 -992 1616 1424";
+		area = "-744 -600 864 800";
 		flightCeiling = "500";
 		flightCeilingRange = "50";
 
@@ -35,8 +35,8 @@ new SimGroup(MissionGroup) {
 		rotation = "1 0 0 0";
 		scale = "1 1 1";
 		direction = "0.57735 0.57735 -0.57735";
-		color = "0.600000 0.600000 0.600000 1.000000";
-		ambient = "0.200000 0.200000 0.200000 1.000000";
+		color = "0.650000 0.650000 0.650000 1.000000";
+		ambient = "0.450000 0.450000 0.450000 1.000000";
 		texture[0] = "special/sunFlare";
 		texture[1] = "special/sunFlare02";
 		texture[2] = "special/LensFlare/flare01";
@@ -68,20 +68,20 @@ new SimGroup(MissionGroup) {
 		cullDensity = "0.3";
 		customArea = "0 0 0 0";
 
-		YDimOverSize = "0";
+		rotation = "0 0 0 0";
+		conjoinBowlDev = "20";
 		XDimOverSize = "0";
+		scale = "1 1 1";
+		YDimOverSize = "0";
 		locked = "true";
 		GraphFile = "MissionBlank.nav";
 		position = "0 0 0 1";
-		conjoinBowlDev = "20";
-		rotation = "0 0 0 0";
 		coverage = "0";
-		scale = "1 1 1";
 	};
 	new WaterBlock() {
-		position = "-112 16 66.342";
+		position = "-112 16 61.342";
 		rotation = "1 0 0 0";
-		scale = "224 224 20";
+		scale = "224 224 25";
 		liquidType = "CrustyLava";
 		density = "1";
 		viscosity = "15";
@@ -108,12 +108,12 @@ new SimGroup(MissionGroup) {
 		useSkyTextures = "1";
 		renderBottomTexture = "0";
 		SkySolidColor = "0.390000 0.390000 0.390000 0.000000";
-		fogDistance = "500";
+		fogDistance = "600";
 		fogColor = "0.500000 0.610000 0.600000 1.000000";
-		fogVolume1 = "175 90 110";
-		fogVolume2 = "350 110 185";
+		fogVolume1 = "375 90 110";
+		fogVolume2 = "550 110 185";
 		fogVolume3 = "0 0 0";
-		materialList = "flingsky03.dml";
+		materialList = "lush_dusk.dml";
 		windVelocity = "1 0 0";
 		windEffectPrecipitation = "0";
 		fogVolumeColor1 = "128.000000 128.000000 128.000000 0.000000";
@@ -230,8 +230,8 @@ new SimGroup(MissionGroup) {
 					lockCount = "0";
 					homingCount = "0";
 
-					team = "1";
 					Target = "-1";
+					team = "1";
 				};
 				new InteriorInstance(InteriorInstance) {
 					position = "-528.083 -216.023 105.764";
@@ -388,8 +388,8 @@ new SimGroup(MissionGroup) {
 					lockCount = "0";
 					homingCount = "0";
 
-					team = "2";
 					Target = "-1";
+					team = "2";
 				};
 				new InteriorInstance(InteriorInstance) {
 					position = "470.695 -253.316 108.5";
@@ -452,7 +452,7 @@ new SimGroup(MissionGroup) {
 				team = "0";
 			};
 			new Item(Team0Flag1) {
-				position = "-6.80083 -42.7686 104.198";
+				position = "-6.80083 -42.7686 104.194";
 				rotation = "1 0 0 0";
 				scale = "1 1 1";
 				dataBlock = "flag";
@@ -462,16 +462,16 @@ new SimGroup(MissionGroup) {
 				static = "0";
 				rotate = "1";
 
-				isHome = "1";
+				originalPosition = "-6.80083 -42.7686 104.194 1 0 0 0";
+				Target = "33";
 				className = "FlagObj";
-				searchSchedule = "4726";
 				returnThread = "2094";
+				searchSchedule = "4726";
 				bounced = "0";
 				team = "0";
 				WayPoint = "4840";
-				Trigger = "7681";
-				Target = "34";
-				originalPosition = "-179.297 76.7287 104.955 1 0 0 0";
+				Trigger = "4902";
+				isHome = "1";
 			};
 		};
 	};
@@ -1352,7 +1352,7 @@ new SimGroup(MissionGroup) {
 
 		new Camera(Observer01) {
 			position = "-488.126 -139.463 165";
-			rotation = "-0.00145202 -0.124327 0.99224 181.328";
+			rotation = "0.16409 0.119847 -0.979138 73.441";
 			scale = "1 1 1";
 			dataBlock = "Observer";
 			lockCount = "0";
@@ -1361,7 +1361,7 @@ new SimGroup(MissionGroup) {
 			team = "0";
 		};
 		new Camera(observer02) {
-			position = "-0.84962 254.039 235.984";
+			position = "-1.64963 198.432 227.951";
 			rotation = "-2.55332e-08 -0.338197 0.941075 180";
 			scale = "1 1 1";
 			dataBlock = "Observer";
@@ -1371,8 +1371,8 @@ new SimGroup(MissionGroup) {
 			team = "0";
 		};
 		new Camera(Observer03) {
-			position = "490.208 -303.938 154.6";
-			rotation = "0.13204 0.0534619 -0.989802 44.4954";
+			position = "-81.7897 -388.067 291.642";
+			rotation = "0.581951 0.235628 -0.77834 54.9669";
 			scale = "1 1 1";
 			dataBlock = "Observer";
 			lockCount = "0";
@@ -1382,7 +1382,7 @@ new SimGroup(MissionGroup) {
 		};
 	};
 	new Precipitation(Precipitation) {
-		position = "-81.1154 -86.5593 122.757";
+		position = "-81.1154 -86.5593 123.157";
 		rotation = "1 0 0 0";
 		scale = "1 1 1";
 		nameTag = "snow";
@@ -1398,6 +1398,19 @@ new SimGroup(MissionGroup) {
 		maxVelocity = "1.5";
 		maxNumDrops = "500";
 		maxRadius = "125";
+	};
+	new Item() {
+		position = "-320.188 -163.923 152.286";
+		rotation = "1 0 0 0";
+		scale = "1 1 1";
+		dataBlock = "RepairKit";
+		lockCount = "0";
+		homingCount = "0";
+		collideable = "0";
+		static = "1";
+		rotate = "0";
+
+		Target = "-1";
 	};
 };
 //--- OBJECT WRITE END ---

@@ -14,14 +14,14 @@
 //--- OBJECT WRITE BEGIN ---
 new SimGroup(MissionGroup) {
 
-	CTF_scoreLimit = "6";
 	musicTrack = "lush";
-	cdTrack = "2";
 	CTF_timeLimit = "25";
 	powerCount = "0";
+	CTF_scoreLimit = "6";
+	cdTrack = "2";
 
 	new MissionArea(MissionArea) {
-		area = "-756 -828 1632 1704";
+		area = "-600 -660 1248 1272";
 		flightCeiling = "2000";
 		flightCeilingRange = "50";
 
@@ -54,24 +54,24 @@ new SimGroup(MissionGroup) {
 		terrainFile = "FrozenFury.ter";
 		squareSize = "12";
 
-		position = "-1024 -1024 0";
-		visibleDistance = "850";
 		hazeDistance = "150";
+		visibleDistance = "850";
+		position = "-1024 -1024 0";
 	};
 	new NavigationGraph(NavGraph) {
 		conjoinAngleDev = "45";
 		cullDensity = "0.3";
 		customArea = "0 0 0 0";
 
-		position = "0 0 0 1";
-		coverage = "0";
-		rotation = "0 0 0 0";
-		conjoinBowlDev = "20";
-		scale = "1 1 1";
-		GraphFile = "FrozenFury.nav";
 		XDimOverSize = "0";
+		GraphFile = "FrozenFury.nav";
+		rotation = "0 0 0 0";
 		YDimOverSize = "0";
+		coverage = "0";
+		scale = "1 1 1";
+		conjoinBowlDev = "20";
 		locked = "true";
+		position = "0 0 0 1";
 	};
 	new Sky(Sky) {
 		position = "-1196 -820 0";
@@ -83,12 +83,12 @@ new SimGroup(MissionGroup) {
 		cloudSpeed1 = "0.01";
 		cloudSpeed2 = "0.02";
 		cloudSpeed3 = "0.03";
-		visibleDistance = "800";
+		visibleDistance = "1000";
 		useSkyTextures = "1";
 		renderBottomTexture = "0";
 		SkySolidColor = "0.490000 0.490000 0.490000 0.000000";
-		fogDistance = "550";
-		fogColor = "0.900000 0.900000 0.920000 1.000000";
+		fogDistance = "850";
+		fogColor = "0.750000 0.750000 0.820000 1.000000";
 		fogVolume1 = "2200 20 300";
 		fogVolume2 = "0 0 0";
 		fogVolume3 = "0 0 0";
@@ -100,9 +100,9 @@ new SimGroup(MissionGroup) {
 		fogVolumeColor3 = "128.000000 128.000000 128.000000 -222768174765569861000000000000000000000.000000";
 		high_visibleDistance = "-1";
 		high_fogDistance = "-1";
-		high_fogVolume1 = "-1 3.27833e-28 3148.48";
-		high_fogVolume2 = "-1 2.24208e-44 2.51673e-42";
-		high_fogVolume3 = "-1 7.74718e+31 1.49413e-07";
+		high_fogVolume1 = "0 0 0";
+		high_fogVolume2 = "0 0 0";
+		high_fogVolume3 = "0 0 0";
 
 		cloudSpeed0 = "0.000000 0.000000";
 		locked = "true";
@@ -126,12 +126,12 @@ new SimGroup(MissionGroup) {
 				static = "1";
 				rotate = "1";
 
-				Target = "33";
-				originalPosition = "33.0396 0.226947 279.839 1 0 0 0";
-				team = "0";
-				Trigger = "4603";
 				isHome = "1";
+				originalPosition = "33.0396 0.226947 279.839 1 0 0 0";
+				Target = "33";
 				className = "FlagObj";
+				team = "0";
+				Trigger = "7220";
 			};
 		};
 	};
@@ -140,8 +140,8 @@ new SimGroup(MissionGroup) {
 		powerCount = "0";
 
 		new Camera() {
-			position = "35.3436 -55.0235 429.39";
-			rotation = "1 0 0 67.609";
+			position = "35.3436 -45.6762 358.398";
+			rotation = "1 0 0 57.8687";
 			scale = "1 1 1";
 			dataBlock = "Observer";
 			lockCount = "0";
@@ -150,7 +150,7 @@ new SimGroup(MissionGroup) {
 			team = "0";
 		};
 		new Camera() {
-			position = "-536.959 -678.677 327.916";
+			position = "-528.545 -644.296 325.026";
 			rotation = "0.908357 -0.109529 0.403597 33.2683";
 			scale = "1 1 1";
 			dataBlock = "Observer";
@@ -160,8 +160,8 @@ new SimGroup(MissionGroup) {
 			team = "0";
 		};
 		new Camera() {
-			position = "526.219 619.708 320.455";
-			rotation = "-0.0557412 -0.183633 0.981413 213.178";
+			position = "516.268 604.827 313.513";
+			rotation = "-0.0557411 -0.183633 0.981413 213.178";
 			scale = "1 1 1";
 			dataBlock = "Observer";
 			lockCount = "0";
@@ -249,14 +249,14 @@ new SimGroup(MissionGroup) {
 		submergeTexture[0] = "special/lavadeath_1";
 		removeWetEdges = "1";
 
-		params3 = "1.21 -0.61 0.13 -0.33";
-		textureSize = "32 32";
-		seedPoints = "0 0 1 0 1 1 0 1";
 		params1 = "0.63 -2.41 0.33 0.21";
 		params0 = "0.32 -0.67 0.066 0.5";
-		params2 = "0.39 0.39 0.2 0.133";
+		params3 = "1.21 -0.61 0.13 -0.33";
 		extent = "100 100 10";
+		params2 = "0.39 0.39 0.2 0.133";
+		textureSize = "32 32";
 		floodFill = "1";
+		seedPoints = "0 0 1 0 1 1 0 1";
 	};
 };
 //--- OBJECT WRITE END ---
