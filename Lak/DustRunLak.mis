@@ -17,11 +17,11 @@
 //--- OBJECT WRITE BEGIN ---
 new SimGroup(MissionGroup) {
 
-	musicTrack = "lush";
-	powerCount = "0";
 	CTF_timeLimit = "25";
 	CTF_scoreLimit = "8";
+	musicTrack = "lush";
 	cdTrack = "2";
+	powerCount = "0";
 
 	new MissionArea(MissionArea) {
 		area = "-288 -688 560 1008";
@@ -36,7 +36,7 @@ new SimGroup(MissionGroup) {
 		scale = "1 1 1";
 		direction = "0.57735 0.57735 -0.57735";
 		color = "0.600000 0.600000 0.600000 1.000000";
-		ambient = "0.200000 0.200000 0.200000 1.000000";
+		ambient = "0.320000 0.320000 0.320000 1.000000";
 		texture[0] = "special/sunFlare";
 		texture[1] = "special/sunFlare02";
 		texture[2] = "special/LensFlare/flare01";
@@ -57,10 +57,10 @@ new SimGroup(MissionGroup) {
 		terrainFile = "DeathBirdsFly.ter";
 		squareSize = "8";
 
+		position = "-1024 -1024 0";
 		hazeDistance = "250";
 		visibleDistance = "1200";
 		locked = "true";
-		position = "-1024 -1024 0";
 	};
 	new NavigationGraph(NavGraph) {
 		conjoinAngleDev = "45";
@@ -68,14 +68,14 @@ new SimGroup(MissionGroup) {
 		customArea = "0 0 0 0";
 
 		coverage = "0";
-		scale = "1 1 1";
-		YDimOverSize = "0";
-		locked = "true";
-		XDimOverSize = "0";
 		position = "0 0 0 1";
-		conjoinBowlDev = "20";
-		rotation = "0 0 0 0";
+		YDimOverSize = "0";
 		GraphFile = "DeathBirdsFly.nav";
+		rotation = "0 0 0 0";
+		XDimOverSize = "0";
+		scale = "1 1 1";
+		locked = "true";
+		conjoinBowlDev = "20";
 	};
 	new Sky(Sky) {
 		position = "-1216 -848 0";
@@ -108,8 +108,8 @@ new SimGroup(MissionGroup) {
 		high_fogVolume2 = "-1 0 0";
 		high_fogVolume3 = "-1 0 0";
 
-		locked = "true";
 		cloudSpeed0 = "0.000000 0.000000";
+		locked = "true";
 	};
 	new SimGroup(Teams) {
 
@@ -175,9 +175,9 @@ new SimGroup(MissionGroup) {
 					lockCount = "0";
 					homingCount = "0";
 
-					locked = "true";
 					team = "0";
 					Target = "33";
+					locked = "true";
 				};
 			};
 			new SimGroup(Rocks_plants) {
@@ -220,8 +220,8 @@ new SimGroup(MissionGroup) {
 					team = "0";
 				};
 				new InteriorInstance() {
-					position = "-94.8046 -147.508 51.5736";
-					rotation = "1 0 0 0";
+					position = "-93.9997 -148.509 50.3057";
+					rotation = "-0.899293 0.385885 -0.205826 61.346";
 					scale = "1 1 1";
 					interiorFile = "xrock7.dif";
 					showTerrainInside = "0";
@@ -229,8 +229,8 @@ new SimGroup(MissionGroup) {
 					team = "0";
 				};
 				new InteriorInstance() {
-					position = "-99.0426 118.678 51.3022";
-					rotation = "1 0 0 0";
+					position = "-98.9616 117.943 50.6886";
+					rotation = "-0.919469 0.362126 0.153104 49.3882";
 					scale = "1 1 1";
 					interiorFile = "xrock7.dif";
 					showTerrainInside = "0";
@@ -737,8 +737,8 @@ new SimGroup(MissionGroup) {
 					scale = "1 1 1";
 					shapeName = "xorg5.dts";
 
-					locked = "true";
 					team = "0";
+					locked = "true";
 				};
 			};
 			new Item(Team0Flag1) {
@@ -752,12 +752,12 @@ new SimGroup(MissionGroup) {
 				static = "1";
 				rotate = "1";
 
-				className = "FlagObj";
-				team = "0";
-				Trigger = "5203";
 				isHome = "1";
+				team = "0";
+				Trigger = "5219";
 				originalPosition = "-60.1204 -167.544 57.7866 1 0 0 0";
 				Target = "34";
+				className = "FlagObj";
 			};
 		};
 	};
@@ -872,14 +872,14 @@ new SimGroup(MissionGroup) {
 	};
 	new ScriptObject(PJTeamHUDData) {
 
-		cell7889 = "0";
 		perRow = "16";
-		rows = "1";
+		Deaths7889 = "0";
 		client0 = "7889";
+		floodprotect = "0";
 		Kills7889 = "0";
 		TotalPlayers = "0";
-		Deaths7889 = "0";
-		floodprotect = "0";
+		cell7889 = "0";
+		rows = "1";
 	};
 	new InteriorInstance() {
 		position = "-60.0812 -167.124 55.8176";
@@ -943,8 +943,8 @@ new SimGroup(MissionGroup) {
 		static = "1";
 		rotate = "0";
 
-		Target = "-1";
 		ammoStore = "1";
+		Target = "-1";
 	};
 	new InteriorInstance() {
 		position = "16.3062 172.924 49.7124";
@@ -1006,6 +1006,44 @@ new SimGroup(MissionGroup) {
 		scale = "1 1 1";
 		interiorFile = "xrock7.dif";
 		showTerrainInside = "0";
+
+		team = "0";
+	};
+	new InteriorInstance() {
+		position = "-51.861 -163.521 37.26";
+		rotation = "0 0 1 178.19";
+		scale = "11.9733 6.8221 2.21521";
+		interiorFile = "xrock6.dif";
+		showTerrainInside = "0";
+	};
+	new InteriorInstance() {
+		position = "-64.3766 -163.549 34.4067";
+		rotation = "0 0 1 178.19";
+		scale = "11.9733 6.8221 2.21521";
+		interiorFile = "xrock6.dif";
+		showTerrainInside = "0";
+	};
+	new TSStatic() {
+		position = "38.157 -585.229 52.2189";
+		rotation = "1 0 0 0";
+		scale = "1 1 1";
+		shapeName = "xorg5.dts";
+
+		team = "0";
+	};
+	new TSStatic() {
+		position = "-3.74764 142.929 49.2063";
+		rotation = "1 0 0 0";
+		scale = "1 1 1";
+		shapeName = "xorg5.dts";
+
+		team = "0";
+	};
+	new TSStatic() {
+		position = "-349.596 -336.162 53.9035";
+		rotation = "1 0 0 0";
+		scale = "1 1 1";
+		shapeName = "xorg5.dts";
 
 		team = "0";
 	};
