@@ -15,12 +15,12 @@
 new SimGroup(MissionGroup) {
 
 	musicTrack = "lush";
-	powerCount = "0";
-	CTF_scoreLimit = "8";
 	cdTrack = "2";
+	CTF_scoreLimit = "8";
+	powerCount = "0";
 
 	new MissionArea(MissionArea) {
-		area = "-536 -616 800 928";
+		area = "-624 -616 976 928";
 		flightCeiling = "450";
 		flightCeilingRange = "20";
 
@@ -113,15 +113,15 @@ new SimGroup(MissionGroup) {
 		cullDensity = "0.1";
 		customArea = "0 0 0 0";
 
+		YDimOverSize = "0";
+		rotation = "0 0 0 0";
 		coverage = "0";
+		GraphFile = "Raindance.nav";
 		scale = "1 1 1";
 		conjoinBowlDev = "20";
 		locked = "true";
 		XDimOverSize = "0";
 		position = "0 0 0 1";
-		GraphFile = "Raindance.nav";
-		YDimOverSize = "0";
-		rotation = "0 0 0 0";
 	};
 	new SimGroup(ObserverDropPoints) {
 
@@ -170,8 +170,8 @@ new SimGroup(MissionGroup) {
 		};
 		new SimGroup(Team0) {
 
-			powerCount = "1";
 			providesPower = "1";
+			powerCount = "1";
 
 			new InteriorInstance() {
 				position = "-325.088 -284.933 135.432";
@@ -180,11 +180,11 @@ new SimGroup(MissionGroup) {
 				interiorFile = "dmisc_neftower1.dif";
 				showTerrainInside = "0";
 
-				locked = "true";
 				team = "0";
+				locked = "true";
 			};
 			new Item(Team0Flag1) {
-				position = "-121.937 -150.65 104.578";
+				position = "-121.937 -150.65 104.576";
 				rotation = "1 0 0 0";
 				scale = "1 1 1";
 				dataBlock = "flag";
@@ -194,13 +194,13 @@ new SimGroup(MissionGroup) {
 				static = "0";
 				rotate = "1";
 
-				returnThread = "28374";
-				className = "FlagObj";
-				isHome = "1";
-				Target = "33";
-				originalPosition = "-121.937 -150.65 104.578 1 0 0 0";
 				team = "0";
-				Trigger = "9710";
+				Trigger = "5377";
+				isHome = "1";
+				returnThread = "28374";
+				originalPosition = "-121.937 -150.65 104.578 1 0 0 0";
+				className = "FlagObj";
+				Target = "33";
 			};
 			new InteriorInstance() {
 				position = "62.1504 250.697 131.408";
@@ -209,8 +209,8 @@ new SimGroup(MissionGroup) {
 				interiorFile = "dmisc_neftower2.dif";
 				showTerrainInside = "0";
 
-				locked = "true";
 				team = "0";
+				locked = "true";
 			};
 			new InteriorInstance() {
 				position = "11.0225 -97.5332 162.664";
@@ -219,8 +219,8 @@ new SimGroup(MissionGroup) {
 				interiorFile = "dmisc_nefobj1.dif";
 				showTerrainInside = "0";
 
-				locked = "true";
 				team = "0";
+				locked = "true";
 			};
 		};
 	};
@@ -341,15 +341,15 @@ new SimGroup(MissionGroup) {
 		envMapIntensity = "0.15";
 		removeWetEdges = "1";
 
+		floodFill = "1";
 		params2 = "0.39 0.39 0.2 0.133";
 		seedPoints = "0 0 1 0 1 1 0 1";
+		params0 = "0.32 -0.67 0.066 0.5";
 		extent = "100 100 10";
+		params3 = "1.21 -0.61 0.13 -0.33";
 		params1 = "0.63 -2.41 0.33 0.21";
 		locked = "true";
 		textureSize = "32 32";
-		floodFill = "1";
-		params0 = "0.32 -0.67 0.066 0.5";
-		params3 = "1.21 -0.61 0.13 -0.33";
 	};
 	new SimGroup(randomObjects) {
 
@@ -637,12 +637,11 @@ new SimGroup(MissionGroup) {
 				locked = "true";
 			};
 			new TSStatic() {
-				position = "89.2807 -423.119 88.7363";
+				position = "89.2807 -423.119 92.7363";
 				rotation = "0 0 -1 62.0003";
 				scale = "1.4 1.4 1.4";
 				shapeName = "borg19.dts";
 
-				locked = "true";
 			};
 			new TSStatic() {
 				position = "273.281 -63.1185 64.1739";
@@ -1496,12 +1495,12 @@ new SimGroup(MissionGroup) {
 	new ScriptObject() {
 		class = "HudManagerDataBloc";
 
-		extent = "140 22";
 		show = "1";
-		name = "AutoMissile";
-		control = "AutoMissileNotifyHUD";
-		position = "348 229";
 		Canvas = "GuiGroup";
+		extent = "140 22";
+		control = "AutoMissileNotifyHUD";
+		name = "AutoMissile";
+		position = "348 229";
 	};
 };
 //--- OBJECT WRITE END ---
