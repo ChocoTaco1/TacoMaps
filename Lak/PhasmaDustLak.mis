@@ -14,14 +14,14 @@
 //--- OBJECT WRITE BEGIN ---
 new SimGroup(MissionGroup) {
 
-	powerCount = "0";
-	CTF_timeLimit = "25";
 	CTF_scoreLimit = "4";
-	cdTrack = "2";
+	CTF_timeLimit = "25";
+	powerCount = "0";
 	musicTrack = "lush";
+	cdTrack = "2";
 
 	new MissionArea(MissionArea) {
-		area = "-384 -392 768 768";
+		area = "-432 -432 848 848";
 		flightCeiling = "2000";
 		flightCeilingRange = "20";
 
@@ -55,8 +55,8 @@ new SimGroup(MissionGroup) {
 		squareSize = "8";
 
 		visibleDistance = "1200";
-		locked = "true";
 		hazeDistance = "250";
+		locked = "true";
 		position = "-1024 -1024 0";
 	};
 	new NavigationGraph(NavGraph) {
@@ -64,12 +64,12 @@ new SimGroup(MissionGroup) {
 		cullDensity = "0.3";
 		customArea = "0 0 0 0";
 
-		rotation = "0 0 0 0";
 		YDimOverSize = "0";
-		scale = "1 1 1";
+		rotation = "0 0 0 0";
 		conjoinBowlDev = "20";
-		coverage = "0";
+		scale = "1 1 1";
 		GraphFile = "PhasmaDust.nav";
+		coverage = "0";
 		locked = "true";
 		XDimOverSize = "0";
 		position = "0 0 0 1";
@@ -265,14 +265,14 @@ new SimGroup(MissionGroup) {
 		envMapIntensity = "0.8";
 		removeWetEdges = "0";
 
-		floodFill = "1";
-		params0 = "0.32 -0.67 0.066 0.5";
-		params2 = "0.39 0.39 0.2 0.133";
 		seedPoints = "0 0 1 0 1 1 0 1";
-		extent = "100 100 10";
 		params1 = "0.63 -2.41 0.33 0.21";
+		floodFill = "1";
+		extent = "100 100 10";
 		textureSize = "32 32";
+		params0 = "0.32 -0.67 0.066 0.5";
 		params3 = "1.21 -0.61 0.13 -0.33";
+		params2 = "0.39 0.39 0.2 0.133";
 	};
 	new SimGroup(Teams) {
 
@@ -294,11 +294,11 @@ new SimGroup(MissionGroup) {
 				rotate = "1";
 
 				team = "0";
-				Trigger = "8891";
-				originalPosition = "-4.19602 -3.57884 124.754 1 0 0 0";
-				Target = "33";
+				Trigger = "7484";
 				className = "FlagObj";
+				Target = "33";
 				isHome = "1";
+				originalPosition = "-4.19602 -3.57884 124.754 1 0 0 0";
 			};
 		};
 	};
@@ -416,9 +416,9 @@ new SimGroup(MissionGroup) {
 				shapeName = "borg1.dts";
 			};
 			new TSStatic() {
-				position = "-196 -12 121.788";
-				rotation = "0.123826 0.0758259 0.989403 212.669";
-				scale = "2 2 2";
+				position = "-556 652 136.756";
+				rotation = "-0.209822 0.0774052 0.974671 137.993";
+				scale = "1.5 1.5 1.5";
 				shapeName = "borg1.dts";
 			};
 			new TSStatic() {
@@ -629,12 +629,6 @@ new SimGroup(MissionGroup) {
 				position = "-100 -500 126.663";
 				rotation = "0.13552 -0.0775996 0.987731 154.308";
 				scale = "0.9 0.9 0.9";
-				shapeName = "borg1.dts";
-			};
-			new TSStatic() {
-				position = "-556 652 136.756";
-				rotation = "-0.209822 0.0774052 0.974671 137.993";
-				scale = "1.5 1.5 1.5";
 				shapeName = "borg1.dts";
 			};
 		};
